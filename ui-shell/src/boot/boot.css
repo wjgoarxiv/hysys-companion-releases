@@ -1,0 +1,39 @@
+/* Start-up loading screen, closing overlay and the WOOJIN GO link. Tokens only; both screens reuse the terminal window
+   (ui-panel--flush), the status dot, the sweeping bar (wb-progress, agent.css) and the prompt brand. */
+.wb-boot { min-height: 100dvh; display: grid; place-items: center; padding: var(--sp-24) var(--gutter); }
+.wb-boot__window { width: min(100%, calc(var(--sp-96) * 5)); }
+.wb-boot__body { display: grid; gap: var(--sp-16); padding: var(--sp-8) var(--sp-24) var(--sp-24); min-width: 0; }
+.wb-boot__title { margin: 0; font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: var(--fw-display); line-height: var(--lh-tight); letter-spacing: var(--track-display); text-wrap: balance; overflow-wrap: anywhere; }
+:lang(ko) .wb-boot__title { letter-spacing: 0; }
+.wb-boot__now { display: grid; gap: var(--sp-8); }
+.wb-boot__line { margin: 0; font-size: var(--fs-base); line-height: var(--lh-body); overflow-wrap: anywhere; }
+.wb-boot .ui-meta, .wb-exit .ui-meta { margin: 0; overflow-wrap: anywhere; }
+.wb-boot__elapsed { color: var(--c-ink-2); }
+
+/* The three steps read like a terminal checklist: done, now, not yet. */
+.wb-boot__steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-8); font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--c-ink-3); }
+.wb-boot__steps li::before { content: "[ ]"; margin-right: var(--sp-8); }
+.wb-boot__steps li[data-step="done"] { color: var(--c-ink-2); }
+.wb-boot__steps li[data-step="done"]::before { content: "[x]"; color: var(--c-accent-2-ink); }
+.wb-boot__steps li[data-step="active"] { color: var(--c-ink); font-weight: var(--fw-strong); }
+.wb-boot__steps li[data-step="active"]::before { content: "[>]"; color: var(--c-accent-ink); animation: wb-boot-blink calc(var(--dur-enter) * 6) var(--ease-linear) infinite; }
+@keyframes wb-boot-blink { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0.25; } }
+
+.wb-boot__fail { display: grid; gap: var(--sp-12); }
+.wb-boot__fail .wb-boot__line { color: var(--c-negative); font-weight: var(--fw-strong); }
+.wb-boot__reason summary { display: flex; align-items: center; min-height: var(--sp-32); cursor: pointer; font-size: var(--fs-sm); color: var(--c-ink-2); }
+.wb-boot__reason code, .wb-boot__log { display: block; padding: var(--sp-8) var(--sp-12); background: var(--c-sunken); border: var(--bw-control) solid var(--c-line); font-family: var(--font-mono); font-size: var(--fs-xs); overflow-wrap: anywhere; }
+
+/* Closing overlay: over everything, so nothing underneath can be reached while the shell cleans up. */
+.wb-exit { position: fixed; inset: 0; z-index: 300; display: grid; place-items: center; padding: var(--sp-24) var(--gutter); background: color-mix(in srgb, var(--c-canvas) 94%, transparent); }
+.wb-exit:focus { outline: none; }
+
+/* WOOJIN GO lockup as a link (Settings > About). */
+.wb-lockup-link { display: inline-flex; color: var(--c-ink); text-decoration: none; transition: color var(--dur-ui) var(--ease); }
+.wb-lockup-link .wb-lockup { color: inherit; }
+.wb-lockup-link:hover { color: var(--c-accent); }
+.wb-lockup-link:focus-visible { outline: var(--bw-control) solid var(--c-focus); outline-offset: var(--sp-4); }
+
+@media (prefers-reduced-motion: reduce) {
+  .wb-boot__steps li[data-step="active"]::before { animation: none; }
+}

@@ -1,0 +1,140 @@
+{
+  "attached": true,
+  "case_name": "demo-gas-compression.hsc",
+  "path": "C:\\Demo\\demo-gas-compression.hsc",
+  "file_session_id": "demo-session",
+  "solver": {
+    "converged": true,
+    "unconverged_count": 0
+  },
+  "counts": {
+    "units": 4,
+    "streams": 9
+  },
+  "topology": {
+    "units": [
+      {
+        "name": "V-100",
+        "type": "separator"
+      },
+      {
+        "name": "K-100",
+        "type": "compressor"
+      },
+      {
+        "name": "E-100",
+        "type": "cooler"
+      },
+      {
+        "name": "V-101",
+        "type": "separator"
+      }
+    ],
+    "streams": [
+      {
+        "name": "Feed Gas",
+        "type": "material"
+      },
+      {
+        "name": "Inlet Vap",
+        "type": "material"
+      },
+      {
+        "name": "Inlet Liq",
+        "type": "material"
+      },
+      {
+        "name": "Comp Out",
+        "type": "material"
+      },
+      {
+        "name": "Cooled",
+        "type": "material"
+      },
+      {
+        "name": "Product Gas",
+        "type": "material"
+      },
+      {
+        "name": "Condensate",
+        "type": "material"
+      },
+      {
+        "name": "Q-K100",
+        "type": "energy"
+      },
+      {
+        "name": "Q-E100",
+        "type": "energy"
+      }
+    ],
+    "connections": [
+      {
+        "from": "Feed Gas",
+        "to": "V-100",
+        "type": "material"
+      },
+      {
+        "from": "V-100",
+        "to": "Inlet Vap",
+        "type": "material"
+      },
+      {
+        "from": "V-100",
+        "to": "Inlet Liq",
+        "type": "material"
+      },
+      {
+        "from": "Inlet Vap",
+        "to": "K-100",
+        "type": "material"
+      },
+      {
+        "from": "K-100",
+        "to": "Comp Out",
+        "type": "material"
+      },
+      {
+        "from": "Comp Out",
+        "to": "E-100",
+        "type": "material"
+      },
+      {
+        "from": "E-100",
+        "to": "Cooled",
+        "type": "material"
+      },
+      {
+        "from": "Cooled",
+        "to": "V-101",
+        "type": "material"
+      },
+      {
+        "from": "V-101",
+        "to": "Product Gas",
+        "type": "material"
+      },
+      {
+        "from": "V-101",
+        "to": "Condensate",
+        "type": "material"
+      },
+      {
+        "from": "Q-K100",
+        "to": "K-100",
+        "type": "energy"
+      },
+      {
+        "from": "E-100",
+        "to": "Q-E100",
+        "type": "energy"
+      }
+    ]
+  },
+  "provider": {
+    "id": "demo",
+    "signed_in": true
+  },
+  "hysys_pid": 4242,
+  "owned": true
+}

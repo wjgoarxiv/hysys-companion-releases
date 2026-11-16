@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="#ko">한국어</a> · <a href="#en">English</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases/latest"><b>다운로드 / Download</b></a>
+  <a href="#ko">한국어</a> · <a href="#en">English</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases/latest"><b>다운로드 / Download</b></a> · <a href="https://wjgoarxiv.github.io/hysys-companion-releases/"><b>튜토리얼 / Tutorial</b></a>
 </p>
 
 <br>
@@ -28,17 +28,41 @@
 
 # 한국어
 
-[다운로드](#다운로드) · [기능](#기능) · [설치와 업데이트](#설치와-업데이트) · [요구 사항](#요구-사항) · [자주 묻는 질문](#자주-묻는-질문)
+[다운로드](#다운로드) · [튜토리얼](#튜토리얼) · [기능](#기능) · [설치와 업데이트](#설치와-업데이트) · [요구 사항](#요구-사항) · [자주 묻는 질문](#자주-묻는-질문)
 
 HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에요. 새 케이스를 말이나 PFD 그림으로 만들고, 열려 있는 케이스에 묻고, 말로 바꿔요. 값을 바꾸기 전에 복사본에서 먼저 계산하고, 승인한 뒤에만 HYSYS에 적용해요.
 
-이 저장소에는 설치 파일만 올라와요.
+이 저장소에는 설치 파일, 브라우저 튜토리얼, 예시 데이터로 도는 화면 데모가 있어요. 앱의 엔진 코드는 들어 있지 않아요.
 
 ## 다운로드
 
 **[최신 설치 파일 받기](https://github.com/wjgoarxiv/hysys-companion-releases/releases/latest)**
 
 릴리스 페이지의 `HYSYSCompanion_Native_Setup_<버전>.exe` 가 설치 파일이에요. 앱 안에서도 새 버전을 확인하고 받을 수 있어요. [설치와 업데이트](#설치와-업데이트)를 보세요.
+
+## 튜토리얼
+
+설치하기 전에 브라우저에서 따라 해 볼 수 있어요. 연습 화면 위에서 안내 말풍선이 다음에 누를 곳을 짚어 주고, 14단계를 직접 누르거나 "그냥 보기"로 지켜볼 수 있어요.
+
+<p align="center">
+  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/">
+    <picture>
+      <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/tutorial/poster-dark.png">
+      <source media="(prefers-reduced-motion: reduce)" srcset="assets/tutorial/poster-light.png">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/tutorial/tutorial-dark.webp" type="image/webp">
+      <source srcset="assets/tutorial/tutorial-light.webp" type="image/webp">
+      <img src="assets/tutorial/poster-light.png" width="800" alt="튜토리얼 5단계 미리보기. 안내 말풍선이 메뉴의 새 케이스를 짚고, 말로 설명하기를 고른 뒤 요청 입력칸으로 옮겨 가며 예시 요청이 들어간다.">
+    </picture>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/"><img src="https://img.shields.io/badge/%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC%20%EC%97%B4%EA%B8%B0-7aa2f7?style=for-the-badge&labelColor=16161e" alt="튜토리얼 열기"></a>
+  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/ui-shell/"><img src="https://img.shields.io/badge/%ED%99%94%EB%A9%B4%20%EB%8D%B0%EB%AA%A8-9ece6a?style=for-the-badge&labelColor=16161e" alt="화면 데모"></a>
+</p>
+
+- **튜토리얼 열기**: [https://wjgoarxiv.github.io/hysys-companion-releases/](https://wjgoarxiv.github.io/hysys-companion-releases/)
+- **화면 데모**: 앱의 실제 화면 코드를 예시 데이터로 돌려요. 빈 화면에서 말로 새 케이스를 시작해 질문, 초안, 승인 카드까지 눌러 볼 수 있어요. HYSYS나 AI에는 연결하지 않아서 케이스를 만들거나 열지는 못해요. 코드는 [`ui-shell/`](ui-shell/)에 있어요.
 
 ## 기능
 
@@ -81,7 +105,7 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 - **스터디**: 설계 케이스 표, 값 바꿔 보기(스윕), Dynamics 실행을 복사본에서 하나씩 차례로 돌리고, 끝나면 알려줘요.
 - **PFD**: 장치나 스트림을 누르면 들어오고 나가는 흐름과 값을 보여줘요.
 - **도면 저장**: 케이스 홈과 새 케이스 초안의 흐름도를 표제란과 스트림 표가 있는 도면으로 SVG, PNG, PDF로 저장해요.
-- **튜토리얼**: 실제 화면 위에서 16단계로 따라 해요. 멈춘 곳부터 이어 할 수 있어요.
+- **튜토리얼**: 실제 화면 위에서 16단계로 따라 해요. 멈춘 곳부터 이어 할 수 있어요. 브라우저용 연습판은 [튜토리얼](#튜토리얼)에 있어요.
 
 ### 화면 둘러보기
 
@@ -231,17 +255,41 @@ HYSYS가 꺼져 있으면 앱에서 바로 켤 수 있어요. 켜지면 자동�
 
 # English
 
-[Download](#download) · [Features](#features) · [Install and update](#install-and-update) · [Requirements](#requirements) · [FAQ](#faq)
+[Download](#download) · [Tutorial](#tutorial) · [Features](#features) · [Install and update](#install-and-update) · [Requirements](#requirements) · [FAQ](#faq)
 
 HYSYS Companion is a Windows desktop app that works beside Aspen HYSYS. Start a new case from words or a PFD picture, ask questions about the case you have open, and change it by describing the change. The app solves a copy first and applies a change to HYSYS only after you approve it.
 
-This repository holds the installer only.
+This repository holds the installer, the browser tutorial and a screen demo that runs on sample data. The app's engine code is not included.
 
 ## Download
 
 **[Get the latest installer](https://github.com/wjgoarxiv/hysys-companion-releases/releases/latest)**
 
 The installer on the release page is `HYSYSCompanion_Native_Setup_<version>.exe`. The app can also check for and download new versions itself. See [Install and update](#install-and-update).
+
+## Tutorial
+
+Try it in the browser before installing. On a practice screen a guide bubble points at the next thing to press; walk the 14 steps yourself or press "그냥 보기" (just watch).
+
+<p align="center">
+  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/">
+    <picture>
+      <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/tutorial/poster-dark.png">
+      <source media="(prefers-reduced-motion: reduce)" srcset="assets/tutorial/poster-light.png">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/tutorial/tutorial-dark.webp" type="image/webp">
+      <source srcset="assets/tutorial/tutorial-light.webp" type="image/webp">
+      <img src="assets/tutorial/poster-light.png" width="800" alt="Preview of tutorial step 5. The guide bubble points at New case in the menu, then at Describe in words, then moves to the request box as a sample request is typed.">
+    </picture>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/"><img src="https://img.shields.io/badge/Open%20the%20tutorial-7aa2f7?style=for-the-badge&labelColor=16161e" alt="Open the tutorial"></a>
+  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/ui-shell/"><img src="https://img.shields.io/badge/Screen%20demo-9ece6a?style=for-the-badge&labelColor=16161e" alt="Screen demo"></a>
+</p>
+
+- **Tutorial**: [https://wjgoarxiv.github.io/hysys-companion-releases/](https://wjgoarxiv.github.io/hysys-companion-releases/) (Korean)
+- **Screen demo**: the app's real screen code running on sample data. Start a new case from words on an empty screen and click through the questions, the draft and the approval card. It connects to no HYSYS and no AI, so it cannot build or open a case. The code is in [`ui-shell/`](ui-shell/).
 
 ## Features
 

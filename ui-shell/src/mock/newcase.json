@@ -1,0 +1,1091 @@
+{
+  "start_words": [
+    [
+      "stage",
+      {
+        "stage": "clarify",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "clarify",
+        "text_ko": "요청을 읽고 있어요",
+        "text_en": "Reading your request"
+      }
+    ],
+    [
+      "clarify",
+      {
+        "job_id": "demo-job",
+        "aspects": [
+          {
+            "id": "equipment",
+            "ok": true,
+            "found": [
+              "압축기",
+              "냉각기",
+              "분리기"
+            ],
+            "missing": []
+          },
+          {
+            "id": "feed",
+            "ok": true,
+            "found": [
+              "천연가스 800 kPa"
+            ],
+            "missing": []
+          },
+          {
+            "id": "conditions",
+            "ok": false,
+            "found": [],
+            "missing": [
+              "토출 압력"
+            ]
+          },
+          {
+            "id": "goal",
+            "ok": false,
+            "found": [],
+            "missing": [
+              "냉각 온도"
+            ]
+          }
+        ],
+        "clear": 2,
+        "total": 4,
+        "questions": [
+          {
+            "id": "dof:K-100",
+            "op_kind": "compressor",
+            "question_ko": "K-100 압축기의 토출 압력은 얼마로 할까요?",
+            "question_en": "What discharge pressure for compressor K-100?",
+            "suggestion_ko": "3,500 kPa",
+            "suggestion_en": "3,500 kPa",
+            "suggestion_why_ko": "가스 압축 예시에서 자주 쓰는 값이에요",
+            "suggestion_why_en": "A common value in gas compression examples"
+          },
+          {
+            "id": "cooler_t",
+            "question_ko": "후단 냉각기 E-100은 몇 도까지 식힐까요?",
+            "question_en": "How far should aftercooler E-100 cool the gas?",
+            "options": [
+              "30 °C",
+              "35 °C",
+              "40 °C"
+            ]
+          }
+        ]
+      }
+    ]
+  ],
+  "after_answer": [
+    [
+      "clarify",
+      {
+        "job_id": "demo-job",
+        "aspects": [],
+        "clear": 4,
+        "total": 4,
+        "answered": true
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "research",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "research",
+        "text_ko": "공정 자료를 찾고 있어요 (데모)",
+        "text_en": "Looking the process up (demo)"
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "intent",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "design",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "design",
+        "text_ko": "장치와 스트림을 고르고 있어요",
+        "text_en": "Choosing units and streams"
+      }
+    ],
+    [
+      "draft",
+      {
+        "job_id": "demo-job",
+        "topology": {
+          "units": [
+            {
+              "name": "V-100",
+              "type": "separator",
+              "kind": "separator"
+            },
+            {
+              "name": "K-100",
+              "type": "compressor",
+              "kind": "compressor"
+            },
+            {
+              "name": "E-100",
+              "type": "cooler",
+              "kind": "cooler"
+            },
+            {
+              "name": "V-101",
+              "type": "separator",
+              "kind": "separator"
+            }
+          ],
+          "streams": [
+            {
+              "name": "Feed Gas",
+              "type": "material"
+            },
+            {
+              "name": "Inlet Vap",
+              "type": "material"
+            },
+            {
+              "name": "Inlet Liq",
+              "type": "material"
+            },
+            {
+              "name": "Comp Out",
+              "type": "material"
+            },
+            {
+              "name": "Cooled",
+              "type": "material"
+            },
+            {
+              "name": "Product Gas",
+              "type": "material"
+            },
+            {
+              "name": "Condensate",
+              "type": "material"
+            },
+            {
+              "name": "Q-K100",
+              "type": "energy"
+            },
+            {
+              "name": "Q-E100",
+              "type": "energy"
+            }
+          ],
+          "connections": [
+            {
+              "from": "Feed Gas",
+              "to": "V-100",
+              "type": "material"
+            },
+            {
+              "from": "V-100",
+              "to": "Inlet Vap",
+              "type": "material"
+            },
+            {
+              "from": "V-100",
+              "to": "Inlet Liq",
+              "type": "material"
+            },
+            {
+              "from": "Inlet Vap",
+              "to": "K-100",
+              "type": "material"
+            },
+            {
+              "from": "K-100",
+              "to": "Comp Out",
+              "type": "material"
+            },
+            {
+              "from": "Comp Out",
+              "to": "E-100",
+              "type": "material"
+            },
+            {
+              "from": "E-100",
+              "to": "Cooled",
+              "type": "material"
+            },
+            {
+              "from": "Cooled",
+              "to": "V-101",
+              "type": "material"
+            },
+            {
+              "from": "V-101",
+              "to": "Product Gas",
+              "type": "material"
+            },
+            {
+              "from": "V-101",
+              "to": "Condensate",
+              "type": "material"
+            },
+            {
+              "from": "Q-K100",
+              "to": "K-100",
+              "type": "energy"
+            },
+            {
+              "from": "E-100",
+              "to": "Q-E100",
+              "type": "energy"
+            }
+          ]
+        },
+        "spec": {
+          "unit_operations": [
+            {
+              "name": "V-100",
+              "kind": "separator",
+              "inlet_streams": [
+                "Feed Gas"
+              ],
+              "outlet_streams": [
+                "Inlet Vap",
+                "Inlet Liq"
+              ]
+            },
+            {
+              "name": "K-100",
+              "kind": "compressor",
+              "inlet_streams": [
+                "Inlet Vap"
+              ],
+              "outlet_streams": [
+                "Comp Out"
+              ],
+              "conditions": {
+                "outlet_pressure": 3500,
+                "adiabatic_efficiency": 75
+              },
+              "units": {
+                "outlet_pressure": "kPa",
+                "adiabatic_efficiency": "%"
+              }
+            },
+            {
+              "name": "E-100",
+              "kind": "cooler",
+              "inlet_streams": [
+                "Comp Out"
+              ],
+              "outlet_streams": [
+                "Cooled"
+              ],
+              "conditions": {
+                "outlet_temperature": 35,
+                "pressure_drop": 30
+              },
+              "units": {
+                "outlet_temperature": "°C",
+                "pressure_drop": "kPa"
+              }
+            },
+            {
+              "name": "V-101",
+              "kind": "separator",
+              "inlet_streams": [
+                "Cooled"
+              ],
+              "outlet_streams": [
+                "Product Gas",
+                "Condensate"
+              ]
+            }
+          ],
+          "streams": [
+            {
+              "name": "Feed Gas",
+              "conditions": {
+                "temperature": 25,
+                "pressure": 800,
+                "molar_flow": 1200
+              },
+              "units": {
+                "temperature": "°C",
+                "pressure": "kPa",
+                "molar_flow": "kgmole/h"
+              }
+            }
+          ]
+        },
+        "assumptions": [
+          "공급 가스는 메탄 위주 천연가스로 가정했어요.",
+          "압축기 단열 효율은 75%로 두었어요.",
+          {
+            "text": "압축 후 냉각은 35 °C까지 하는 경우가 흔해요.",
+            "source_url": "https://example.com/gas-compression-basics",
+            "source_title": "예시 자료 (데모)",
+            "excerpt": "후단 냉각기는 보통 30~40 °C로 식혀요.",
+            "quote_verified": true
+          }
+        ],
+        "ledger": [
+          {
+            "target": "K-100.adiabatic_efficiency",
+            "kind": "default"
+          },
+          {
+            "target": "E-100.outlet_temperature",
+            "kind": "ai_estimate"
+          }
+        ]
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "preview",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "preview",
+        "text_ko": "초안을 미리 그려 보고 있어요",
+        "text_en": "Drawing the preview"
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "verify",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "verify",
+        "text_ko": "복사본에서 확인 계산 중이에요 (데모)",
+        "text_en": "Check solve on a copy (demo)"
+      }
+    ],
+    [
+      "verify",
+      {
+        "converged": true,
+        "can_repair": false
+      }
+    ],
+    [
+      "needs_approval",
+      {
+        "job_id": "demo-job",
+        "approval_token": "demo-approval",
+        "unconverged": false,
+        "ttl_remaining_seconds": 900
+      }
+    ]
+  ],
+  "start_other": [
+    [
+      "stage",
+      {
+        "stage": "template",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "intent",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "design",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "design",
+        "text_ko": "장치와 스트림을 고르고 있어요",
+        "text_en": "Choosing units and streams"
+      }
+    ],
+    [
+      "draft",
+      {
+        "job_id": "demo-job",
+        "topology": {
+          "units": [
+            {
+              "name": "V-100",
+              "type": "separator",
+              "kind": "separator"
+            },
+            {
+              "name": "K-100",
+              "type": "compressor",
+              "kind": "compressor"
+            },
+            {
+              "name": "E-100",
+              "type": "cooler",
+              "kind": "cooler"
+            },
+            {
+              "name": "V-101",
+              "type": "separator",
+              "kind": "separator"
+            }
+          ],
+          "streams": [
+            {
+              "name": "Feed Gas",
+              "type": "material"
+            },
+            {
+              "name": "Inlet Vap",
+              "type": "material"
+            },
+            {
+              "name": "Inlet Liq",
+              "type": "material"
+            },
+            {
+              "name": "Comp Out",
+              "type": "material"
+            },
+            {
+              "name": "Cooled",
+              "type": "material"
+            },
+            {
+              "name": "Product Gas",
+              "type": "material"
+            },
+            {
+              "name": "Condensate",
+              "type": "material"
+            },
+            {
+              "name": "Q-K100",
+              "type": "energy"
+            },
+            {
+              "name": "Q-E100",
+              "type": "energy"
+            }
+          ],
+          "connections": [
+            {
+              "from": "Feed Gas",
+              "to": "V-100",
+              "type": "material"
+            },
+            {
+              "from": "V-100",
+              "to": "Inlet Vap",
+              "type": "material"
+            },
+            {
+              "from": "V-100",
+              "to": "Inlet Liq",
+              "type": "material"
+            },
+            {
+              "from": "Inlet Vap",
+              "to": "K-100",
+              "type": "material"
+            },
+            {
+              "from": "K-100",
+              "to": "Comp Out",
+              "type": "material"
+            },
+            {
+              "from": "Comp Out",
+              "to": "E-100",
+              "type": "material"
+            },
+            {
+              "from": "E-100",
+              "to": "Cooled",
+              "type": "material"
+            },
+            {
+              "from": "Cooled",
+              "to": "V-101",
+              "type": "material"
+            },
+            {
+              "from": "V-101",
+              "to": "Product Gas",
+              "type": "material"
+            },
+            {
+              "from": "V-101",
+              "to": "Condensate",
+              "type": "material"
+            },
+            {
+              "from": "Q-K100",
+              "to": "K-100",
+              "type": "energy"
+            },
+            {
+              "from": "E-100",
+              "to": "Q-E100",
+              "type": "energy"
+            }
+          ]
+        },
+        "spec": {
+          "unit_operations": [
+            {
+              "name": "V-100",
+              "kind": "separator",
+              "inlet_streams": [
+                "Feed Gas"
+              ],
+              "outlet_streams": [
+                "Inlet Vap",
+                "Inlet Liq"
+              ]
+            },
+            {
+              "name": "K-100",
+              "kind": "compressor",
+              "inlet_streams": [
+                "Inlet Vap"
+              ],
+              "outlet_streams": [
+                "Comp Out"
+              ],
+              "conditions": {
+                "outlet_pressure": 3500,
+                "adiabatic_efficiency": 75
+              },
+              "units": {
+                "outlet_pressure": "kPa",
+                "adiabatic_efficiency": "%"
+              }
+            },
+            {
+              "name": "E-100",
+              "kind": "cooler",
+              "inlet_streams": [
+                "Comp Out"
+              ],
+              "outlet_streams": [
+                "Cooled"
+              ],
+              "conditions": {
+                "outlet_temperature": 35,
+                "pressure_drop": 30
+              },
+              "units": {
+                "outlet_temperature": "°C",
+                "pressure_drop": "kPa"
+              }
+            },
+            {
+              "name": "V-101",
+              "kind": "separator",
+              "inlet_streams": [
+                "Cooled"
+              ],
+              "outlet_streams": [
+                "Product Gas",
+                "Condensate"
+              ]
+            }
+          ],
+          "streams": [
+            {
+              "name": "Feed Gas",
+              "conditions": {
+                "temperature": 25,
+                "pressure": 800,
+                "molar_flow": 1200
+              },
+              "units": {
+                "temperature": "°C",
+                "pressure": "kPa",
+                "molar_flow": "kgmole/h"
+              }
+            }
+          ]
+        },
+        "assumptions": [
+          "공급 가스는 메탄 위주 천연가스로 가정했어요.",
+          "압축기 단열 효율은 75%로 두었어요.",
+          {
+            "text": "압축 후 냉각은 35 °C까지 하는 경우가 흔해요.",
+            "source_url": "https://example.com/gas-compression-basics",
+            "source_title": "예시 자료 (데모)",
+            "excerpt": "후단 냉각기는 보통 30~40 °C로 식혀요.",
+            "quote_verified": true
+          }
+        ],
+        "ledger": [
+          {
+            "target": "K-100.adiabatic_efficiency",
+            "kind": "default"
+          },
+          {
+            "target": "E-100.outlet_temperature",
+            "kind": "ai_estimate"
+          }
+        ]
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "preview",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "preview",
+        "text_ko": "초안을 미리 그려 보고 있어요",
+        "text_en": "Drawing the preview"
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "verify",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "verify",
+        "text_ko": "복사본에서 확인 계산 중이에요 (데모)",
+        "text_en": "Check solve on a copy (demo)"
+      }
+    ],
+    [
+      "verify",
+      {
+        "converged": true,
+        "can_repair": false
+      }
+    ],
+    [
+      "needs_approval",
+      {
+        "job_id": "demo-job",
+        "approval_token": "demo-approval",
+        "unconverged": false,
+        "ttl_remaining_seconds": 900
+      }
+    ]
+  ],
+  "revise": [
+    [
+      "stage",
+      {
+        "stage": "revise",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "revise",
+        "text_ko": "고친 내용을 초안에 넣고 있어요",
+        "text_en": "Putting your changes into the draft"
+      }
+    ],
+    [
+      "draft",
+      {
+        "job_id": "demo-job",
+        "topology": {
+          "units": [
+            {
+              "name": "V-100",
+              "type": "separator",
+              "kind": "separator"
+            },
+            {
+              "name": "K-100",
+              "type": "compressor",
+              "kind": "compressor"
+            },
+            {
+              "name": "E-100",
+              "type": "cooler",
+              "kind": "cooler"
+            },
+            {
+              "name": "V-101",
+              "type": "separator",
+              "kind": "separator"
+            }
+          ],
+          "streams": [
+            {
+              "name": "Feed Gas",
+              "type": "material"
+            },
+            {
+              "name": "Inlet Vap",
+              "type": "material"
+            },
+            {
+              "name": "Inlet Liq",
+              "type": "material"
+            },
+            {
+              "name": "Comp Out",
+              "type": "material"
+            },
+            {
+              "name": "Cooled",
+              "type": "material"
+            },
+            {
+              "name": "Product Gas",
+              "type": "material"
+            },
+            {
+              "name": "Condensate",
+              "type": "material"
+            },
+            {
+              "name": "Q-K100",
+              "type": "energy"
+            },
+            {
+              "name": "Q-E100",
+              "type": "energy"
+            }
+          ],
+          "connections": [
+            {
+              "from": "Feed Gas",
+              "to": "V-100",
+              "type": "material"
+            },
+            {
+              "from": "V-100",
+              "to": "Inlet Vap",
+              "type": "material"
+            },
+            {
+              "from": "V-100",
+              "to": "Inlet Liq",
+              "type": "material"
+            },
+            {
+              "from": "Inlet Vap",
+              "to": "K-100",
+              "type": "material"
+            },
+            {
+              "from": "K-100",
+              "to": "Comp Out",
+              "type": "material"
+            },
+            {
+              "from": "Comp Out",
+              "to": "E-100",
+              "type": "material"
+            },
+            {
+              "from": "E-100",
+              "to": "Cooled",
+              "type": "material"
+            },
+            {
+              "from": "Cooled",
+              "to": "V-101",
+              "type": "material"
+            },
+            {
+              "from": "V-101",
+              "to": "Product Gas",
+              "type": "material"
+            },
+            {
+              "from": "V-101",
+              "to": "Condensate",
+              "type": "material"
+            },
+            {
+              "from": "Q-K100",
+              "to": "K-100",
+              "type": "energy"
+            },
+            {
+              "from": "E-100",
+              "to": "Q-E100",
+              "type": "energy"
+            }
+          ]
+        },
+        "spec": {
+          "unit_operations": [
+            {
+              "name": "V-100",
+              "kind": "separator",
+              "inlet_streams": [
+                "Feed Gas"
+              ],
+              "outlet_streams": [
+                "Inlet Vap",
+                "Inlet Liq"
+              ]
+            },
+            {
+              "name": "K-100",
+              "kind": "compressor",
+              "inlet_streams": [
+                "Inlet Vap"
+              ],
+              "outlet_streams": [
+                "Comp Out"
+              ],
+              "conditions": {
+                "outlet_pressure": 3500,
+                "adiabatic_efficiency": 75
+              },
+              "units": {
+                "outlet_pressure": "kPa",
+                "adiabatic_efficiency": "%"
+              }
+            },
+            {
+              "name": "E-100",
+              "kind": "cooler",
+              "inlet_streams": [
+                "Comp Out"
+              ],
+              "outlet_streams": [
+                "Cooled"
+              ],
+              "conditions": {
+                "outlet_temperature": 35,
+                "pressure_drop": 30
+              },
+              "units": {
+                "outlet_temperature": "°C",
+                "pressure_drop": "kPa"
+              }
+            },
+            {
+              "name": "V-101",
+              "kind": "separator",
+              "inlet_streams": [
+                "Cooled"
+              ],
+              "outlet_streams": [
+                "Product Gas",
+                "Condensate"
+              ]
+            }
+          ],
+          "streams": [
+            {
+              "name": "Feed Gas",
+              "conditions": {
+                "temperature": 25,
+                "pressure": 800,
+                "molar_flow": 1200
+              },
+              "units": {
+                "temperature": "°C",
+                "pressure": "kPa",
+                "molar_flow": "kgmole/h"
+              }
+            }
+          ]
+        },
+        "assumptions": [
+          "공급 가스는 메탄 위주 천연가스로 가정했어요.",
+          "압축기 단열 효율은 75%로 두었어요.",
+          {
+            "text": "압축 후 냉각은 35 °C까지 하는 경우가 흔해요.",
+            "source_url": "https://example.com/gas-compression-basics",
+            "source_title": "예시 자료 (데모)",
+            "excerpt": "후단 냉각기는 보통 30~40 °C로 식혀요.",
+            "quote_verified": true
+          }
+        ],
+        "ledger": [
+          {
+            "target": "K-100.adiabatic_efficiency",
+            "kind": "default"
+          },
+          {
+            "target": "E-100.outlet_temperature",
+            "kind": "ai_estimate"
+          }
+        ]
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "preview",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "preview",
+        "text_ko": "초안을 미리 그려 보고 있어요",
+        "text_en": "Drawing the preview"
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "verify",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "verify",
+        "text_ko": "복사본에서 확인 계산 중이에요 (데모)",
+        "text_en": "Check solve on a copy (demo)"
+      }
+    ],
+    [
+      "verify",
+      {
+        "converged": true,
+        "can_repair": false
+      }
+    ],
+    [
+      "needs_approval",
+      {
+        "job_id": "demo-job",
+        "approval_token": "demo-approval",
+        "unconverged": false,
+        "ttl_remaining_seconds": 900
+      }
+    ]
+  ],
+  "recheck": [
+    [
+      "stage",
+      {
+        "stage": "preview",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "preview",
+        "text_ko": "초안을 미리 그려 보고 있어요",
+        "text_en": "Drawing the preview"
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "verify",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "verify",
+        "text_ko": "복사본에서 확인 계산 중이에요 (데모)",
+        "text_en": "Check solve on a copy (demo)"
+      }
+    ],
+    [
+      "verify",
+      {
+        "converged": true,
+        "can_repair": false
+      }
+    ],
+    [
+      "needs_approval",
+      {
+        "job_id": "demo-job",
+        "approval_token": "demo-approval",
+        "unconverged": false,
+        "ttl_remaining_seconds": 900
+      }
+    ]
+  ],
+  "approve": [
+    [
+      "stage",
+      {
+        "stage": "apply",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "activity",
+      {
+        "stage": "apply",
+        "text_ko": "케이스에 적용하고 있어요 (데모)",
+        "text_en": "Applying to the case (demo)"
+      }
+    ],
+    [
+      "stage",
+      {
+        "stage": "open",
+        "job_id": "demo-job"
+      }
+    ],
+    [
+      "opened",
+      {
+        "path": "C:\\Demo\\demo-gas-compression.hsc",
+        "saved_path": "C:\\Demo\\cases\\demo-gas-compression.hsc"
+      }
+    ]
+  ],
+  "ask": [
+    [
+      "done",
+      {
+        "answer_text": "**K-100 토출 압력은 3,500 kPa예요.** (데모 답변)\n\n- 토출 압력 = 3,500 kPa\n- 단열 효율 = 75 %\n\n이 화면 데모의 답은 미리 만든 예시예요."
+      }
+    ]
+  ]
+}

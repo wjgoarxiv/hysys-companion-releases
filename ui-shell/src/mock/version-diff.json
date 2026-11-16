@@ -1,0 +1,42 @@
+{
+  "units": {
+    "added": [],
+    "removed": []
+  },
+  "streams": {
+    "added": [],
+    "removed": []
+  },
+  "connections": {
+    "added": [],
+    "removed": [],
+    "moved": []
+  },
+  "specs": [
+    {
+      "key": "E-100.OutletTemperature",
+      "a": 35,
+      "b": 40
+    }
+  ],
+  "values": [
+    {
+      "scope": "stream",
+      "key": "Product Gas.T",
+      "a": 35.0,
+      "b": 40.0,
+      "abs_delta": 5.0,
+      "rel_delta": 0.143,
+      "unit": "°C"
+    },
+    {
+      "scope": "unit",
+      "key": "E-100.Duty",
+      "a": 1820000.0,
+      "b": 1610000.0,
+      "abs_delta": -210000.0,
+      "rel_delta": -0.115,
+      "unit": "kJ/h"
+    }
+  ]
+}

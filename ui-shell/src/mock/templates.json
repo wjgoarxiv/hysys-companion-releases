@@ -1,0 +1,41 @@
+{
+  "templates": [
+    {
+      "kind": "gas_compression",
+      "group": "process",
+      "units": 4,
+      "display_ko": "가스 압축",
+      "display_en": "Gas compression",
+      "description_ko": "입구 분리기, 압축기, 후단 냉각기, 제품 분리기",
+      "description_en": "Inlet separator, compressor, aftercooler, product separator",
+      "params": [
+        {
+          "name": "discharge_p",
+          "label_ko": "토출 압력",
+          "label_en": "Discharge pressure",
+          "unit": "kPa",
+          "default": 3500,
+          "min": 200,
+          "max": 20000
+        },
+        {
+          "name": "cooler_t",
+          "label_ko": "냉각기 출구 온도",
+          "label_en": "Cooler outlet temperature",
+          "unit": "°C",
+          "default": 35,
+          "min": -20,
+          "max": 120
+        }
+      ],
+      "fixed": [
+        {
+          "name": "pkg",
+          "label_ko": "물성 패키지",
+          "label_en": "Property package",
+          "value": "Peng-Robinson"
+        }
+      ]
+    }
+  ]
+}

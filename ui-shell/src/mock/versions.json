@@ -1,0 +1,23 @@
+{
+  "entries": [
+    {
+      "id": "v2",
+      "time": "2026-11-16T15:20:00",
+      "label": "K-100 토출 3,500 kPa",
+      "note": "승인한 뒤 남긴 스냅샷",
+      "source": "agent",
+      "parent": "v1",
+      "case_file": "demo-gas-compression.hsc"
+    },
+    {
+      "id": "v1",
+      "time": "2026-11-16T15:15:00",
+      "label": "처음 상태",
+      "note": "",
+      "source": "auto",
+      "parent": null,
+      "case_file": "demo-gas-compression.hsc"
+    }
+  ],
+  "unreadable": []
+}

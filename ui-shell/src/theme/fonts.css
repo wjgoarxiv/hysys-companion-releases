@@ -1,0 +1,4 @@
+/* Meslo LGS NF (Apache 2.0; Nerd Fonts patch MIT), Latin subset in ./fonts/. Pretendard comes from tokens.css
+   (the full variable file in css/fonts/, Korean included). For a Latin-only page, swap in ./fonts/Pretendard-latin.woff2 (58 KB). */
+@font-face { font-family: "Meslo LGS NF"; src: url("./fonts/MesloLGSNF-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Meslo LGS NF"; src: url("./fonts/MesloLGSNF-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }

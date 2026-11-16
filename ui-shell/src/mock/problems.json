@@ -1,0 +1,37 @@
+{
+  "file_session_id": "demo-session",
+  "items": [
+    {
+      "id": "p1",
+      "severity": "warning",
+      "title_ko": "E-100 출구 온도가 기본값이에요",
+      "title_en": "E-100 outlet temperature is a default",
+      "detail": "35 °C로 두었어요. 냉각수 조건에 맞게 바꿀 수 있어요.",
+      "locate": {
+        "kind": "unit",
+        "name": "E-100"
+      },
+      "fix": null,
+      "source": "dof"
+    },
+    {
+      "id": "p2",
+      "severity": "info",
+      "title_ko": "물성 패키지는 Peng-Robinson이에요",
+      "title_en": "Property package is Peng-Robinson",
+      "detail": "",
+      "locate": {
+        "kind": "",
+        "name": ""
+      },
+      "fix": null,
+      "source": "property_package"
+    }
+  ],
+  "counts": {
+    "error": 0,
+    "warning": 1,
+    "info": 1
+  },
+  "sources_failed": []
+}

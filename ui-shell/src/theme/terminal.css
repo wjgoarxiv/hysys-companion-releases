@@ -1,0 +1,51 @@
+/* Woojin Go · Terminalcore — signature layer on top of the kit (ui/tokens.css + ui/components.css).
+   Load order: tokens.css → components.css → fonts.css → terminal.css. Tokens and ui-* classes only. */
+
+body { background-color: var(--c-canvas); background-image: var(--canvas-pattern); background-size: var(--canvas-pattern-size); color: var(--c-ink); }
+
+/* ---- prompt-style brand: ~/name▮ ------------------------------------------------------------------------------------ */
+.tc-brand { display: inline-flex; align-items: center; font-family: var(--font-mono); font-weight: var(--fw-strong); letter-spacing: 0.02em; text-transform: lowercase; color: var(--c-ink); text-decoration: none; }
+.tc-brand__prompt { color: var(--c-accent-2-ink); }
+.tc-brand__cursor { display: inline-block; width: 0.6em; height: 1.1em; margin-left: var(--sp-4); background: var(--c-accent); }
+
+/* ---- system status bar: real values only ------------------------------------------------------------------------------ */
+.tc-status { border-top: 1px solid var(--c-line); background: var(--c-sunken); font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: var(--track-label); text-transform: uppercase; color: var(--c-ink-2); }
+.tc-status__inner { display: flex; flex-wrap: wrap; gap: var(--sp-4) var(--sp-24); min-height: 28px; align-items: center; }
+.tc-status__inner > span { white-space: nowrap; }
+.tc-status__dot { display: inline-block; width: var(--sp-8); height: var(--sp-8); border-radius: 50%; background: var(--c-negative); vertical-align: middle; }
+.tc-status__dot[data-ok="true"] { background: var(--c-positive); }
+.tc-status__time { margin-left: auto; color: var(--c-accent-ink); font-variant-numeric: tabular-nums; }
+
+/* ---- CRT texture: media frames and readouts only, never body text ------------------------------------------------------ */
+.tc-crt { position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background-image: repeating-linear-gradient(0deg, color-mix(in srgb, var(--c-sunken) 38%, transparent) 0 1px, transparent 1px 3px); }
+.tc-crt::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: var(--sp-8);
+  background-image: conic-gradient(var(--c-sunken) 25%, transparent 0 50%, var(--c-sunken) 0 75%, transparent 0); background-size: 4px 4px; }
+@keyframes tc-rgb-step {
+  0% { text-shadow: 2px 0 var(--c-accent), -2px 0 var(--c-accent-2); }
+  50% { text-shadow: -2px 0 var(--c-accent), 2px 0 var(--c-accent-2); }
+  100% { text-shadow: none; }
+}
+.tc-rgb-hover:hover, .tc-rgb-hover:focus-visible { animation: tc-rgb-step calc(var(--dur-enter) * 2) var(--ease) 1 both; }
+
+/* ---- kinetic layer (js/kinetic.js) -------------------------------------------------------------------------------------- */
+.tc-lens { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; }
+[data-tc-rule] { position: relative; }
+[data-tc-rule]::after { content: ""; position: absolute; left: 0; right: 0; top: calc(var(--bw-rule) * -1); height: var(--bw-rule); background: var(--c-accent); transform: scaleX(var(--tc-rule, 1)); transform-origin: left center; pointer-events: none; }
+.tc-w__word { display: inline-block; white-space: nowrap; }
+.tc-w__c { display: inline-block; text-align: center; }
+.tc-ticker__rail { overflow: hidden; border-block: var(--bw-control) solid var(--c-line); background: var(--c-canvas); padding-block: var(--sp-8); }
+.tc-ticker__track { white-space: nowrap; width: max-content; font-family: var(--font-mono); font-size: var(--fs-sm); letter-spacing: var(--track-label); text-transform: uppercase; color: var(--c-ink-2); text-overflow: clip; }
+.ui-footer .ui-label { color: var(--c-canvas); }
+.tc-ticker__beat { display: block; width: 64px; height: 2px; margin-top: var(--sp-8); background: var(--c-accent-2); transform-origin: left center; opacity: 0.4; }
+
+/* ---- signature mark link ------------------------------------------------------------------------------------------------- */
+.tc-signature { display: inline-flex; color: inherit; text-decoration: none; }
+.tc-signature svg { height: var(--sp-48); width: auto; }
+.tc-signature:hover, .tc-signature:focus-visible { color: var(--c-accent); }
+.tc-signature:focus-visible { outline: var(--bw-control) solid var(--c-focus); outline-offset: var(--sp-4); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-rgb-hover:hover, .tc-rgb-hover:focus-visible { animation: none; }
+  .tc-lens { display: none; }
+}

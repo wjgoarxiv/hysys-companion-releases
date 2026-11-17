@@ -106,7 +106,7 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 - **에이전트**: "Feed 온도를 40 °C로 바꿔줘"처럼 말로 바꿔요. 복사본에서 먼저 계산하고, 승인한 뒤에만 적용하고, 되돌릴 수 있어요. 구조를 바꾸면 원본은 두고 `_vN.hsc` 새 파일을 만들어요.
 - **질문**: "이 탑의 환류비는?"처럼 물으면 열린 케이스의 실제 값으로 답해요. 파일에서 못 찾은 값은 못 찾았다고 말해요.
 - **버전**: 스냅샷을 저장하고, 두 버전을 값과 단위까지 비교하고, 이전 버전을 새 파일로 열어요.
-- **스터디**: 설계 케이스 표, 값 바꿔 보기(스윕), Dynamics 실행을 복사본에서 하나씩 차례로 돌리고, 끝나면 알려줘요. Dynamics(케이스 홈 준비 카드, 새 케이스 옵션, 스터디의 동적 모사)는 아직 실험 기능이에요.
+- **스터디**: 설계 케이스 표, 값 바꿔 보기(스윕), Dynamics 실행을 복사본에서 하나씩 차례로 돌리고, 끝나면 알려줘요. Dynamics(케이스 홈 준비 카드, 새 케이스 옵션, 스터디의 동적 모사)는 아직 실험 기능이에요. 동적 사본은 지금은 밸브와 분리기로 된 공정에서 자동으로 만들어요. 압축기나 냉각기가 있으면 어떤 장치 때문인지 알려줘요.
 - **PFD**: 장치나 스트림을 누르면 들어오고 나가는 흐름과 값을 보여줘요.
 - **도면 저장**: 케이스 홈과 새 케이스 초안의 흐름도를 표제란과 스트림 표가 있는 도면으로 SVG, PNG, PDF로 저장해요.
 - **튜토리얼**: 실제 화면 위에서 16단계로 따라 해요. 멈춘 곳부터 이어 할 수 있어요. 브라우저용 연습판은 [튜토리얼](#튜토리얼)에 있어요.
@@ -337,7 +337,7 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
 - **Agent**: Change values by asking, for example "Change the Feed temperature to 40 °C". It solves a copy first, applies only after you approve, and can be undone. A structural change keeps the original and writes a new `_vN.hsc` file.
 - **Questions**: Ask "What is the reflux ratio of this column?" and the answer comes from the real values in the open case. A value it cannot find is reported as not found.
 - **Versions**: Save snapshots, compare two versions with values and units, open an earlier version as a new file.
-- **Studies**: Run a design-case table, a value sweep and Dynamics runs one after another on copies, and get told when they finish. Dynamics (the Case home prepare card, the new-case option and Dynamics studies) is still experimental.
+- **Studies**: Run a design-case table, a value sweep and Dynamics runs one after another on copies, and get told when they finish. Dynamics (the Case home prepare card, the new-case option and Dynamics studies) is still experimental. A dynamic copy is prepared automatically for processes made of valves and separators; if a compressor or a cooler is in the way, the card names it.
 - **PFD**: Click a unit or stream to see the flows in and out with their values.
 - **Drawing export**: Save the flowsheet from Case home or a new-case draft as a drawing with a title block and stream table, in SVG, PNG or PDF.
 - **Tutorial**: A 16-step walkthrough on the real screens that resumes where you stopped.

@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="#ko">한국어</a> · <a href="#en">English</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases/latest"><b>다운로드 / Download</b></a> · <a href="https://wjgoarxiv.github.io/hysys-companion-releases/"><b>튜토리얼 / Tutorial</b></a>
+  <a href="#ko">한국어</a> · <a href="#en">English</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases/latest"><b>다운로드 / Download</b></a> · <a href="https://wjgoarxiv.github.io/hysys-companion-releases/"><b>튜토리얼 / Tutorial</b></a> · <a href="https://wjgoarxiv.github.io/hysys-companion-releases/intro/"><b>처음이세요? 소개 슬라이드 / New here? 15-slide intro</b></a>
 </p>
 
 <br>
@@ -28,7 +28,7 @@
 
 # 한국어
 
-[다운로드](#다운로드) · [튜토리얼](#튜토리얼) · [기능](#기능) · [설치와 업데이트](#설치와-업데이트) · [요구 사항](#요구-사항) · [자주 묻는 질문](#자주-묻는-질문)
+[다운로드](#다운로드) · [소개 슬라이드](https://wjgoarxiv.github.io/hysys-companion-releases/intro/) · [튜토리얼](#튜토리얼) · [기능](#기능) · [설치와 업데이트](#설치와-업데이트) · [요구 사항](#요구-사항) · [자주 묻는 질문](#자주-묻는-질문)
 
 HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에요. 새 케이스를 말이나 PFD 그림으로 만들고, 열려 있는 케이스에 묻고, 말로 바꿔요. 값을 바꾸기 전에 복사본에서 먼저 계산하고, 승인한 뒤에만 HYSYS에 적용해요.
 
@@ -57,10 +57,12 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 </p>
 
 <p align="center">
+  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/intro/"><img src="https://img.shields.io/badge/%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%84%B8%EC%9A%94%3F%20%EC%86%8C%EA%B0%9C%20%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-7dcfff?style=for-the-badge&labelColor=16161e" alt="처음이세요? 소개 슬라이드"></a>
   <a href="https://wjgoarxiv.github.io/hysys-companion-releases/"><img src="https://img.shields.io/badge/%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC%20%EC%97%B4%EA%B8%B0-7aa2f7?style=for-the-badge&labelColor=16161e" alt="튜토리얼 열기"></a>
   <a href="https://wjgoarxiv.github.io/hysys-companion-releases/ui-shell/"><img src="https://img.shields.io/badge/%ED%99%94%EB%A9%B4%20%EB%8D%B0%EB%AA%A8-9ece6a?style=for-the-badge&labelColor=16161e" alt="화면 데모"></a>
 </p>
 
+- **처음이세요? 소개 슬라이드로 한눈에 보기**: [https://wjgoarxiv.github.io/hysys-companion-releases/intro/](https://wjgoarxiv.github.io/hysys-companion-releases/intro/). 앱으로 무엇을 할 수 있는지 15장으로 보여줘요. 한국어와 영어로 볼 수 있어요.
 - **튜토리얼 열기**: [https://wjgoarxiv.github.io/hysys-companion-releases/](https://wjgoarxiv.github.io/hysys-companion-releases/)
 - **화면 데모**: 앱의 실제 화면 코드를 예시 데이터로 돌려요. 빈 화면에서 말로 새 케이스를 시작해 질문, 초안, 승인 카드까지 눌러 볼 수 있어요. HYSYS나 AI에는 연결하지 않아서 케이스를 만들거나 열지는 못해요. 코드는 [`ui-shell/`](ui-shell/)에 있어요.
 
@@ -86,6 +88,8 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
   <sub>가스 압축 템플릿으로 만든 새 케이스가 승인을 기다리는 화면</sub>
 </p>
 
+- "이렇게 만들려고 해요" 카드에서 성분·스트림·조건·장치 값·이름·물성 패키지를 바로 고치고 되돌릴 수 있어요. 성분을 빼면 모든 스트림 조성이 100%로 다시 맞춰지고, 스트림에 적은 압력·온도는 HYSYS에 그대로 들어가요.
+- 계산이 수렴하지 않은 케이스도 "수렴하지 않은 채로 열기"로 열 수 있어요. 열린 뒤에는 수렴하지 않은 재순환과 값이 정해지지 않은 스트림을 카드에 보여줘요. 열기에 실패해도 초안이 남아 있어요.
 - 빠진 값은 추천값과 함께 물어보고, 앱이 채운 값은 결과에 모두 보여줘요. 채운 값에는 "자동 보정", "기본값", "AI 추정" 표시가 붙어요.
 - 말로 만들 때는 공정을 웹에서 먼저 찾아 참고해요. 참고한 페이지는 초안 카드에 보여요. 설정 > 웹 자료 찾기에서 끌 수 있어요.
 - 중간에 오류가 나거나 연결이 끊겨도 "멈춘 곳부터 다시"로 이어가요. 앞에서 만든 초안과 답변은 그대로 써요.
@@ -102,7 +106,7 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 - **에이전트**: "Feed 온도를 40 °C로 바꿔줘"처럼 말로 바꿔요. 복사본에서 먼저 계산하고, 승인한 뒤에만 적용하고, 되돌릴 수 있어요. 구조를 바꾸면 원본은 두고 `_vN.hsc` 새 파일을 만들어요.
 - **질문**: "이 탑의 환류비는?"처럼 물으면 열린 케이스의 실제 값으로 답해요. 파일에서 못 찾은 값은 못 찾았다고 말해요.
 - **버전**: 스냅샷을 저장하고, 두 버전을 값과 단위까지 비교하고, 이전 버전을 새 파일로 열어요.
-- **스터디**: 설계 케이스 표, 값 바꿔 보기(스윕), Dynamics 실행을 복사본에서 하나씩 차례로 돌리고, 끝나면 알려줘요.
+- **스터디**: 설계 케이스 표, 값 바꿔 보기(스윕), Dynamics 실행을 복사본에서 하나씩 차례로 돌리고, 끝나면 알려줘요. Dynamics(케이스 홈 준비 카드, 새 케이스 옵션, 스터디의 동적 모사)는 아직 실험 기능이에요.
 - **PFD**: 장치나 스트림을 누르면 들어오고 나가는 흐름과 값을 보여줘요.
 - **도면 저장**: 케이스 홈과 새 케이스 초안의 흐름도를 표제란과 스트림 표가 있는 도면으로 SVG, PNG, PDF로 저장해요.
 - **튜토리얼**: 실제 화면 위에서 16단계로 따라 해요. 멈춘 곳부터 이어 할 수 있어요. 브라우저용 연습판은 [튜토리얼](#튜토리얼)에 있어요.
@@ -255,7 +259,7 @@ HYSYS가 꺼져 있으면 앱에서 바로 켤 수 있어요. 켜지면 자동�
 
 # English
 
-[Download](#download) · [Tutorial](#tutorial) · [Features](#features) · [Install and update](#install-and-update) · [Requirements](#requirements) · [FAQ](#faq)
+[Download](#download) · [Intro slides](https://wjgoarxiv.github.io/hysys-companion-releases/intro/) · [Tutorial](#tutorial) · [Features](#features) · [Install and update](#install-and-update) · [Requirements](#requirements) · [FAQ](#faq)
 
 HYSYS Companion is a Windows desktop app that works beside Aspen HYSYS. Start a new case from words or a PFD picture, ask questions about the case you have open, and change it by describing the change. The app solves a copy first and applies a change to HYSYS only after you approve it.
 
@@ -284,10 +288,12 @@ Try it in the browser before installing. On a practice screen a guide bubble poi
 </p>
 
 <p align="center">
+  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/intro/"><img src="https://img.shields.io/badge/New%20here%3F%2015--slide%20intro-7dcfff?style=for-the-badge&labelColor=16161e" alt="New here? 15-slide intro"></a>
   <a href="https://wjgoarxiv.github.io/hysys-companion-releases/"><img src="https://img.shields.io/badge/Open%20the%20tutorial-7aa2f7?style=for-the-badge&labelColor=16161e" alt="Open the tutorial"></a>
   <a href="https://wjgoarxiv.github.io/hysys-companion-releases/ui-shell/"><img src="https://img.shields.io/badge/Screen%20demo-9ece6a?style=for-the-badge&labelColor=16161e" alt="Screen demo"></a>
 </p>
 
+- **New here? See what it can do in 15 slides**: [https://wjgoarxiv.github.io/hysys-companion-releases/intro/](https://wjgoarxiv.github.io/hysys-companion-releases/intro/). Korean and English.
 - **Tutorial**: [https://wjgoarxiv.github.io/hysys-companion-releases/](https://wjgoarxiv.github.io/hysys-companion-releases/) (Korean)
 - **Screen demo**: the app's real screen code running on sample data. Start a new case from words on an empty screen and click through the questions, the draft and the approval card. It connects to no HYSYS and no AI, so it cannot build or open a case. The code is in [`ui-shell/`](ui-shell/).
 
@@ -313,6 +319,8 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
   <sub>A gas compression template waiting for approval (Korean UI)</sub>
 </p>
 
+- On the "Here is the draft" card, edit components, streams, conditions, unit values, names and the property package directly, and undo any change. Removing a component rescales every stream composition to 100%, and the pressures and temperatures you type on a stream go into HYSYS as written.
+- A case that did not converge can still be opened with "Open without converging". Once open, its card lists the unconverged recycles and the streams without values. If opening fails, the draft is kept.
 - Missing values are asked about with a suggested value, and every value the app filled in is shown in the result, tagged "auto-corrected", "default" or "AI estimate".
 - When you start from words, the app first looks the process up on the web and shows the pages it used on the draft card. Turn it off in Settings > Web lookup.
 - If a run stops on an error or a dropped connection, "Resume from the failed step" picks it up again and keeps the draft and answers made so far.
@@ -329,7 +337,7 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
 - **Agent**: Change values by asking, for example "Change the Feed temperature to 40 °C". It solves a copy first, applies only after you approve, and can be undone. A structural change keeps the original and writes a new `_vN.hsc` file.
 - **Questions**: Ask "What is the reflux ratio of this column?" and the answer comes from the real values in the open case. A value it cannot find is reported as not found.
 - **Versions**: Save snapshots, compare two versions with values and units, open an earlier version as a new file.
-- **Studies**: Run a design-case table, a value sweep and Dynamics runs one after another on copies, and get told when they finish.
+- **Studies**: Run a design-case table, a value sweep and Dynamics runs one after another on copies, and get told when they finish. Dynamics (the Case home prepare card, the new-case option and Dynamics studies) is still experimental.
 - **PFD**: Click a unit or stream to see the flows in and out with their values.
 - **Drawing export**: Save the flowsheet from Case home or a new-case draft as a drawing with a title block and stream table, in SVG, PNG or PDF.
 - **Tutorial**: A 16-step walkthrough on the real screens that resumes where you stopped.

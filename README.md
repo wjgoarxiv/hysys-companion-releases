@@ -255,7 +255,7 @@ HYSYS가 꺼져 있으면 앱에서 바로 켤 수 있어요. 켜지면 자동�
 <details>
 <summary>기여하거나 보안 문제를 알리고 싶어요.</summary>
 
-버그 알리기, 기능 제안, 튜토리얼 고치기는 [CONTRIBUTING.md](CONTRIBUTING.md)를 보세요. 보안 문제는 공개 이슈 대신 [SECURITY.md](SECURITY.md)의 비공개 신고 양식으로 알려 주세요. 모두 [행동 강령](CODE_OF_CONDUCT.md)을 지켜 주세요.
+버그 알리기, 기능 제안, 튜토리얼 고치기는 [CONTRIBUTING.md](CONTRIBUTING.md)를 보세요. 보안 문제는 공개 이슈 대신 [SECURITY.md](SECURITY.md)의 비공개 신고 양식으로 알려 주세요. 모두 [행동 강령](CODE_OF_CONDUCT.md)을 지켜 주세요. 라이선스는 [Apache License 2.0](LICENSE)이에요.
 </details>
 
 <p align="right"><a href="#ko">맨 위로</a> · <a href="#en">English</a></p>
@@ -493,13 +493,13 @@ Each version's changes are listed on the [release page](https://github.com/wjgoa
 <details>
 <summary>How can I contribute or report a security problem?</summary>
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for bug reports, feature ideas and tutorial fixes. Report security problems through the private form in [SECURITY.md](SECURITY.md), not a public issue. Please follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md) for bug reports, feature ideas and tutorial fixes. Report security problems through the private form in [SECURITY.md](SECURITY.md), not a public issue. Please follow the [Code of Conduct](CODE_OF_CONDUCT.md). The license is the [Apache License 2.0](LICENSE).
 </details>
 
 <br>
 
 <p align="center">
-  <a href="#ko">한국어</a> · <a href="#en">English</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases/latest">Download</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases">Releases</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/issues">Issues</a> · <a href="CONTRIBUTING.md">Contributing</a> · <a href="SECURITY.md">Security</a> · <a href="CODE_OF_CONDUCT.md">Code of Conduct</a>
+  <a href="#ko">한국어</a> · <a href="#en">English</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases/latest">Download</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases">Releases</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/issues">Issues</a> · <a href="CONTRIBUTING.md">Contributing</a> · <a href="SECURITY.md">Security</a> · <a href="CODE_OF_CONDUCT.md">Code of Conduct</a> · <a href="LICENSE">License</a>
 </p>
 
 <p align="center">

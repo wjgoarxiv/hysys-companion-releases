@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <b>Aspen HYSYS를 말로 다루는 Windows 데스크톱 앱</b><br>
+  <b>Aspen HYSYS를 말로 다루는 Windows 데스크톱&nbsp;앱</b><br>
   A Windows desktop app that works beside Aspen HYSYS
 </p>
 
@@ -75,7 +75,7 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/workflow-dark.png">
-    <img src="assets/workflow-light.png" width="900" alt="흐름도. A 새 케이스: 말, PFD 그림, PDF 도면에서 시작해 초안 그림, 사람이 고치기, 복사본 확인, 승인하고 열기 순서로 이어지고, 계산이 수렴하지 않으면 막힌 장치를 알려주며 고치기로 돌아간다. B 열린 케이스 에이전트: 말로 요청, 복사본 계산, 승인, 적용 순서이고 다음 요청으로 돌아간다.">
+    <img src="assets/workflow-light.png" width="900" alt="흐름도. A 새 케이스: 말, PFD 그림, PDF 도면에서 시작해 초안 그림, 사람이 고치기, 복사본 확인, 승인하고 열기 순서로 이어지고, 계산이 수렴하지 않으면 막힌 장치를 알려주며 고치기로 돌아간다. B 열린 케이스 에이전트: 말로 요청, 바뀔 값 미리보기, 승인, 적용 순서이고 다음 요청으로 돌아간다.">
   </picture>
 </p>
 
@@ -203,7 +203,8 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 2. 받은 파일의 SHA-256을 릴리스 페이지의 값과 비교해요.
 
    ```powershell
-   Get-FileHash .\HYSYSCompanion_Native_Setup_<버전>.exe -Algorithm SHA256
+   Get-FileHash -Algorithm SHA256 `
+     .\HYSYSCompanion_Native_Setup_<버전>.exe
    ```
 
 3. 설치 파일을 실행해요.
@@ -312,7 +313,7 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/workflow-dark.png">
-    <img src="assets/workflow-light.png" width="900" alt="Flow diagram. A, New case: starting from words, a PFD picture or a PDF drawing, the app makes a draft drawing, you revise it, a copy is checked, and you approve and open. If the solve does not converge the app names the blocked unit and returns to revising. B, Agent on an open case: ask in words, solve a copy, approve, apply, then the next request.">
+    <img src="assets/workflow-light.png" width="900" alt="Flow diagram. A, New case: starting from words, a PFD picture or a PDF drawing, the app makes a draft drawing, you revise it, a copy is checked, and you approve and open. If the solve does not converge the app names the blocked unit and returns to revising. B, Agent on an open case: ask in words, preview the values that will change, approve, apply, then the next request.">
   </picture>
 </p>
 
@@ -440,7 +441,8 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
 2. Compare the file's SHA-256 with the value on the release page.
 
    ```powershell
-   Get-FileHash .\HYSYSCompanion_Native_Setup_<version>.exe -Algorithm SHA256
+   Get-FileHash -Algorithm SHA256 `
+     .\HYSYSCompanion_Native_Setup_<version>.exe
    ```
 
 3. Run the installer.

@@ -8,9 +8,9 @@ HYSYS Companion을 같이 좋게 만들어 주셔서 고마워요. 이 저장소
 
 ### 버그 알리기
 
-1. 앱의 설정 또는 실패 카드에서 **문제 보고용 로그 저장**을 눌러요. 키와 개인 경로는 지우고 저장돼요.
+1. 앱의 설정에서 **문제 보고용 로그 저장**을 눌러요. 키는 지우고 저장하지만 파일 경로는 남으니, 보내기 전에 한 번 확인해 주세요.
 2. [Issues](https://github.com/wjgoarxiv/hysys-companion-releases/issues)에 새 이슈를 열고 적어 주세요.
-   - 앱 버전(설정 > 정보)과 Windows, HYSYS 버전
+   - 앱 버전(설정 > 업데이트)과 Windows, HYSYS 버전
    - 무엇을 하려고 했는지, 실제로 무슨 일이 있었는지
    - 다시 일어나게 하는 순서
 3. 로그 파일을 붙이기 전에 한 번 더 열어 보세요. 회사 케이스 파일, 공장 데이터, 고객 이름은 올리지 마세요.
@@ -42,9 +42,9 @@ Thank you for helping improve HYSYS Companion. This repository holds the install
 
 ### Report a bug
 
-1. In the app, press **Save problem-report log** in Settings or on the failure card. Keys and personal paths are removed before saving.
+1. In the app, press **Save problem-report log** in Settings. Keys are removed before saving; file paths stay, so check the file before you send it.
 2. Open a new issue in [Issues](https://github.com/wjgoarxiv/hysys-companion-releases/issues) with:
-   - the app version (Settings > About) and your Windows and HYSYS versions;
+   - the app version (Settings > Updates) and your Windows and HYSYS versions;
    - what you tried to do and what happened instead;
    - the steps that make it happen again.
 3. Open the log file once more before attaching it. Do not upload company case files, plant data or customer names.

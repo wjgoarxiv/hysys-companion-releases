@@ -30,7 +30,7 @@
 
 [다운로드](#다운로드) · [소개 슬라이드](https://wjgoarxiv.github.io/hysys-companion-releases/intro/) · [튜토리얼](#튜토리얼) · [기능](#기능) · [설치와 업데이트](#설치와-업데이트) · [요구 사항](#요구-사항) · [자주 묻는 질문](#자주-묻는-질문)
 
-HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에요. 새 케이스를 말이나 PFD 그림으로 만들고, 열려 있는 케이스에 묻고, 말로 바꿔요. 값을 바꾸기 전에 복사본에서 먼저 계산하고, 승인한 뒤에만 HYSYS에 적용해요.
+HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에요. 새 케이스를 말이나 PFD 그림으로 만들고, 열려 있는 케이스에 묻고, 말로 바꿔요. 바뀔 내용을 먼저 보여주고, 승인한 뒤에만 HYSYS에 적용해요.
 
 이 저장소에는 설치 파일, 브라우저 튜토리얼, 예시 데이터로 도는 화면 데모가 있어요. 앱의 엔진 코드는 들어 있지 않아요.
 
@@ -103,7 +103,7 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 
 - **케이스 홈**: HYSYS에서 연 케이스의 흐름도와 "먼저 볼 문제"가 바로 보여요. 다른 케이스로 바꾸면 따라와요.
 - **문제**: 수렴하지 않는 장치의 원인과 고칠 값을 보여줘요. 승인하면 적용해요.
-- **에이전트**: "Feed 온도를 40 °C로 바꿔줘"처럼 말로 바꿔요. 복사본에서 먼저 계산하고, 승인한 뒤에만 적용하고, 되돌릴 수 있어요. 구조를 바꾸면 원본은 두고 `_vN.hsc` 새 파일을 만들어요.
+- **에이전트**: "Feed 온도를 40 °C로 바꿔줘"처럼 말로 바꿔요. 바뀔 값을 전후로 미리 보여주고, 승인한 뒤에만 적용하고, 되돌릴 수 있어요. 구조를 바꾸면 원본은 두고 `_vN.hsc` 새 파일을 만들어요.
 - **질문**: "이 탑의 환류비는?"처럼 물으면 열린 케이스의 실제 값으로 답해요. 파일에서 못 찾은 값은 못 찾았다고 말해요.
 - **버전**: 스냅샷을 저장하고, 두 버전을 값과 단위까지 비교하고, 이전 버전을 새 파일로 열어요.
 - **스터디**: 설계 케이스 표, 값 바꿔 보기(스윕), Dynamics 실행을 복사본에서 하나씩 차례로 돌리고, 끝나면 알려줘요. Dynamics(케이스 홈 준비 카드, 새 케이스 옵션, 스터디의 동적 모사)는 아직 실험 기능이에요. 동적 사본은 지금은 밸브와 분리기로 된 공정에서 자동으로 만들어요. 압축기나 냉각기가 있으면 어떤 장치 때문인지 알려줘요.
@@ -125,7 +125,7 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 <td width="50%" align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/screens/agent-approval-dark.png">
-  <img src="assets/screens/agent-approval-light.png" width="420" alt="에이전트 패널. Feed Gas 온도를 25 °C에서 40 °C로 바꾸는 요청이 복사본 미리보기를 마치고 승인하고 적용, 버리기 버튼을 보여준다.">
+  <img src="assets/screens/agent-approval-light.png" width="420" alt="에이전트 패널. Feed Gas 온도를 25 °C에서 40 °C로 바꾸는 요청이 미리보기를 마치고 승인하고 적용, 버리기 버튼을 보여준다.">
 </picture>
 <br><sub>에이전트 승인 대기</sub>
 </td>
@@ -192,10 +192,10 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 
 ### 안전하게 쓰는 방법
 
-- 케이스는 승인하기 전에 바뀌지 않아요. 계산은 복사본에서 먼저 해요.
+- 케이스는 승인하기 전에 바뀌지 않아요. 새 케이스, 구조 변경, 스터디는 복사본에서 먼저 계산하고, 값 변경은 미리보기로 보여준 뒤 실패하면 되돌려요.
 - 앱이 띄운 HYSYS만 앱이 관리해요. 직접 켠 HYSYS는 건드리지 않고 알려만 줘요.
-- HYSYS에 확인 창이 떠 있으면 앱은 창을 누르지 않고 기다려요. 창 내용은 진행 카드에 보여줘요.
-- 진단 정보는 설정과 실패 카드에서 저장할 수 있어요. 키와 개인 경로는 지우고 저장해요.
+- HYSYS에 확인 창이 떠 있으면 앱은 창을 누르지 않고 기다려요. 창 내용은 진행 카드에 보여줘요. 예외는 하나예요. 앱이 만든 확인용 복사본을 활성화할지 묻는 창에는 앱이 "아니요"로 답해요.
+- 진단 정보는 설정에서 저장할 수 있어요. 키는 지우고 저장하지만 파일 경로는 남아요.
 
 ## 설치와 업데이트
 
@@ -215,7 +215,7 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 - Windows 10 또는 11
 - Aspen HYSYS (설치된 상태)
 - Microsoft Edge WebView2
-- AI 기능은 설정 > AI 계정에서 연결한 계정으로 동작해요. ChatGPT와 xAI Grok은 로그인으로 연결하고, OpenAI 호환 공급자도 쓸 수 있어요.
+- AI 기능은 설정 > AI 계정에서 연결한 계정으로 동작해요. ChatGPT와 xAI Grok은 로그인으로 연결해요.
 
 설치 파일에 필요한 구성 요소가 들어 있어요. 별도로 Python을 설치하지 않아도 돼요.
 
@@ -224,7 +224,7 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 <details>
 <summary>내 케이스 파일이 바로 바뀌나요?</summary>
 
-아니요. 승인하기 전에는 바뀌지 않아요. 값 변경은 복사본에서 먼저 계산하고, 승인한 뒤에만 적용하고, 되돌릴 수 있어요. 구조를 바꾸면 원본은 그대로 두고 `_vN.hsc` 새 파일을 만들어요.
+아니요. 승인하기 전에는 바뀌지 않아요. 값 변경은 바뀔 값을 먼저 보여주고, 승인한 뒤에만 적용하고, 되돌릴 수 있어요. 구조를 바꾸면 원본은 그대로 두고 `_vN.hsc` 새 파일을 만들어요.
 </details>
 
 <details>
@@ -236,13 +236,13 @@ HYSYS가 꺼져 있으면 앱에서 바로 켤 수 있어요. 켜지면 자동�
 <details>
 <summary>회사 네트워크에서 AI 연결이 안 돼요.</summary>
 
-설정 > 네트워크에서 프록시를 자동, 수동, 직접 중에 고를 수 있어요. 연결 테스트와 재탐지 버튼으로 다시 잡아 볼 수 있어요.
+설정 > 네트워크에서 프록시를 자동, 수동, 직접 중에 고를 수 있어요. 연결 테스트와 네트워크 다시 잡기 버튼으로 다시 잡아 볼 수 있어요.
 </details>
 
 <details>
 <summary>문제가 생기면 어떻게 하나요?</summary>
 
-설정이나 실패 카드에서 진단 정보를 저장하고, 이 저장소의 [Issues](https://github.com/wjgoarxiv/hysys-companion-releases/issues)에 알려 주세요. 키와 개인 경로는 지우고 저장돼요.
+설정에서 진단 정보를 저장하고, 이 저장소의 [Issues](https://github.com/wjgoarxiv/hysys-companion-releases/issues)에 알려 주세요. 키는 지우고 저장되지만 파일 경로는 남으니, 보내기 전에 확인해 주세요.
 </details>
 
 <details>
@@ -267,7 +267,7 @@ HYSYS가 꺼져 있으면 앱에서 바로 켤 수 있어요. 켜지면 자동�
 
 [Download](#download) · [Intro slides](https://wjgoarxiv.github.io/hysys-companion-releases/intro/) · [Tutorial](#tutorial) · [Features](#features) · [Install and update](#install-and-update) · [Requirements](#requirements) · [FAQ](#faq)
 
-HYSYS Companion is a Windows desktop app that works beside Aspen HYSYS. Start a new case from words or a PFD picture, ask questions about the case you have open, and change it by describing the change. The app solves a copy first and applies a change to HYSYS only after you approve it.
+HYSYS Companion is a Windows desktop app that works beside Aspen HYSYS. Start a new case from words or a PFD picture, ask questions about the case you have open, and change it by describing the change. The app shows what will change first and applies it to HYSYS only after you approve.
 
 This repository holds the installer, the browser tutorial and a screen demo that runs on sample data. The app's engine code is not included.
 
@@ -327,7 +327,7 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
 
 - On the "Here is the draft" card, edit components, streams, conditions, unit values, names and the property package directly, and undo any change. Removing a component rescales every stream composition to 100%, and the pressures and temperatures you type on a stream go into HYSYS as written.
 - A case that did not converge can still be opened with "Open without converging". Once open, its card lists the unconverged recycles and the streams without values. If opening fails, the draft is kept.
-- Missing values are asked about with a suggested value, and every value the app filled in is shown in the result, tagged "auto-corrected", "default" or "AI estimate".
+- Missing values are asked about with a suggested value, and every value the app filled in is shown in the result, tagged "Auto-fixed", "Default" or "AI guess".
 - When you start from words, the app first looks the process up on the web and shows the pages it used on the draft card. Turn it off in Settings > Web lookup.
 - If a run stops on an error or a dropped connection, "Resume from the failed step" picks it up again and keeps the draft and answers made so far.
 - A progress card shows what the app is doing now, how long that usually takes, and a plain name for each step. Its cancel button really stops the run.
@@ -340,7 +340,7 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
 
 - **Case home**: Shows the flowsheet of the case open in HYSYS and the "problems to look at first". It follows when you switch cases.
 - **Problems**: Shows why a unit does not converge and which value to change. Applies the fix when you approve.
-- **Agent**: Change values by asking, for example "Change the Feed temperature to 40 °C". It solves a copy first, applies only after you approve, and can be undone. A structural change keeps the original and writes a new `_vN.hsc` file.
+- **Agent**: Change values by asking, for example "Change the Feed temperature to 40 °C". It previews the before and after values, applies only after you approve, and can be undone. A structural change keeps the original and writes a new `_vN.hsc` file.
 - **Questions**: Ask "What is the reflux ratio of this column?" and the answer comes from the real values in the open case. A value it cannot find is reported as not found.
 - **Versions**: Save snapshots, compare two versions with values and units, open an earlier version as a new file.
 - **Studies**: Run a design-case table, a value sweep and Dynamics runs one after another on copies, and get told when they finish. Dynamics (the Case home prepare card, the new-case option and Dynamics studies) is still experimental. A dynamic copy is prepared automatically for processes made of valves and separators; if a compressor or a cooler is in the way, the card names it.
@@ -362,7 +362,7 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
 <td width="50%" align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/screens/agent-approval-dark.png">
-  <img src="assets/screens/agent-approval-light.png" width="420" alt="Agent panel. A request to change the Feed Gas temperature from 25 °C to 40 °C has been previewed on a copy and shows Approve and apply and Discard buttons.">
+  <img src="assets/screens/agent-approval-light.png" width="420" alt="Agent panel. A request to change the Feed Gas temperature from 25 °C to 40 °C has been previewed and shows Approve and apply and Discard buttons.">
 </picture>
 <br><sub>Agent waiting for approval</sub>
 </td>
@@ -429,10 +429,10 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
 
 ### Working safely
 
-- Your case does not change before you approve. Solves run on a copy first.
+- Your case does not change before you approve. New cases, structural changes and studies are solved on a copy first; a value change is previewed and rolled back if it fails.
 - The app manages only the HYSYS it launched. A HYSYS you started yourself is left alone and the app only tells you.
-- If HYSYS shows a confirmation window, the app waits and does not click it. The window text appears on the progress card.
-- Diagnostics can be saved from Settings and from failure cards. Keys and personal paths are removed before saving.
+- If HYSYS shows a confirmation window, the app waits and does not click it. The window text appears on the progress card. One exception: the app answers "No" when HYSYS asks whether to activate the app's own background check copy.
+- Diagnostics can be saved from Settings. Keys are removed before saving; file paths stay.
 
 ## Install and update
 
@@ -452,7 +452,7 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
 - Windows 10 or 11
 - Aspen HYSYS, installed
 - Microsoft Edge WebView2
-- AI features run on the account you connect in Settings > AI accounts. ChatGPT and xAI Grok connect by sign-in, and OpenAI-compatible providers can be used too.
+- AI features run on the account you connect in Settings > AI accounts. ChatGPT and xAI Grok connect by sign-in.
 
 The installer carries what the app needs. You do not need to install Python separately.
 
@@ -461,7 +461,7 @@ The installer carries what the app needs. You do not need to install Python sepa
 <details>
 <summary>Does my case file change right away?</summary>
 
-No. Nothing changes before you approve. A value change is solved on a copy first, applied only after you approve, and can be undone. A structural change keeps the original and writes a new `_vN.hsc` file.
+No. Nothing changes before you approve. A value change is previewed first, applied only after you approve, and can be undone. A structural change keeps the original and writes a new `_vN.hsc` file.
 </details>
 
 <details>
@@ -479,7 +479,7 @@ In Settings > Network you can choose automatic, manual or direct proxy handling.
 <details>
 <summary>What if something goes wrong?</summary>
 
-Save diagnostics from Settings or the failure card and report it in this repository's [Issues](https://github.com/wjgoarxiv/hysys-companion-releases/issues). Keys and personal paths are removed before saving.
+Save diagnostics from Settings and report it in this repository's [Issues](https://github.com/wjgoarxiv/hysys-companion-releases/issues). Keys are removed before saving; file paths stay, so check the file first.
 </details>
 
 <details>

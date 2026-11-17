@@ -23,14 +23,14 @@ between you and the maintainer.
 
 A useful report says:
 
-- the app version (Settings > About) and Windows version;
+- the app version (Settings > Updates) and Windows version;
 - what an attacker can do, and what they need first (local access, a crafted
   file, a network position);
 - steps to reproduce, with a minimal case file or request if one is needed.
 
 Remove company case files, plant data, account tokens and personal paths before
-attaching anything. The problem-report log saved from Settings already strips keys
-and personal paths, but check it before you send it.
+attaching anything. The problem-report log saved from Settings removes keys but keeps
+file paths, so check it before you send it.
 
 ## What to expect
 
@@ -44,8 +44,8 @@ and personal paths, but check it before you send it.
 In scope:
 
 - the local sidecar on `127.0.0.1` (loopback only by design) and its HTTP routes;
-- the approval gate: a case change without operator confirmation and a valid
-  single-use confirmation token;
+- the approval gate: a case change without operator confirmation, or a new-case
+  apply without a valid single-use confirmation token;
 - the updater: installing a file whose checksum does not match the release;
 - secrets: AI account tokens or keys leaking into logs, diagnostics or files;
 - the installer and the files it writes.

@@ -251,6 +251,12 @@ HYSYS가 꺼져 있으면 앱에서 바로 켤 수 있어요. 켜지면 자동�
 [릴리스 페이지](https://github.com/wjgoarxiv/hysys-companion-releases/releases)에 버전마다 바뀐 점이 있어요.
 </details>
 
+<details>
+<summary>기여하거나 보안 문제를 알리고 싶어요.</summary>
+
+버그 알리기, 기능 제안, 튜토리얼 고치기는 [CONTRIBUTING.md](CONTRIBUTING.md)를 보세요. 보안 문제는 공개 이슈 대신 [SECURITY.md](SECURITY.md)의 비공개 신고 양식으로 알려 주세요. 모두 [행동 강령](CODE_OF_CONDUCT.md)을 지켜 주세요.
+</details>
+
 <p align="right"><a href="#ko">맨 위로</a> · <a href="#en">English</a></p>
 
 <br>
@@ -482,10 +488,20 @@ Save diagnostics from Settings or the failure card and report it in this reposit
 Each version's changes are listed on the [release page](https://github.com/wjgoarxiv/hysys-companion-releases/releases).
 </details>
 
+<details>
+<summary>How can I contribute or report a security problem?</summary>
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for bug reports, feature ideas and tutorial fixes. Report security problems through the private form in [SECURITY.md](SECURITY.md), not a public issue. Please follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+</details>
+
 <br>
 
 <p align="center">
-  <a href="#ko">한국어</a> · <a href="#en">English</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases/latest">Download</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases">Releases</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/issues">Issues</a>
+  <a href="#ko">한국어</a> · <a href="#en">English</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases/latest">Download</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/releases">Releases</a> · <a href="https://github.com/wjgoarxiv/hysys-companion-releases/issues">Issues</a> · <a href="CONTRIBUTING.md">Contributing</a> · <a href="SECURITY.md">Security</a> · <a href="CODE_OF_CONDUCT.md">Code of Conduct</a>
+</p>
+
+<p align="center">
+  <sub>이 저장소의 내용은 <a href="LICENSE">Apache License 2.0</a>으로 배포돼요. · The contents of this repository are licensed under the <a href="LICENSE">Apache License 2.0</a>.</sub>
 </p>
 
 <p align="center">

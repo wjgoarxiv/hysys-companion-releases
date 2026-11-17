@@ -2,7 +2,7 @@
 
 [한국어](#한국어) · [English](#english)
 
-Shown for reference; all rights reserved.
+Licensed under the [Apache License 2.0](../LICENSE), like the rest of this repository. Bundled fonts keep their own licenses (see [`docs/ui-shell/licenses/`](../docs/ui-shell/licenses/)).
 
 ## 한국어
 

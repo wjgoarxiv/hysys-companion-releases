@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <b>Aspen HYSYS를 말로 다루는 Windows 데스크톱&nbsp;앱</b><br>
+  <b>Aspen HYSYS를 말로 다루는<br>Windows 데스크톱 앱</b><br>
   A Windows desktop app that works beside Aspen HYSYS
 </p>
 

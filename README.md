@@ -209,7 +209,9 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 
 3. 설치 파일을 실행해요.
 
-**업데이트**: 설정 > 업데이트에서 새 버전을 확인해요. 받기와 설치는 직접 누를 때만 시작하고, 받은 파일의 체크섬이 맞아야 설치할 수 있어요.
+**업데이트**: 설정 > 업데이트에서 새 버전을 확인해요. 받기와 설치는 직접 누를 때만 시작하고, 받은 파일의 체크섬이 맞아야 설치할 수 있어요. v0.10.39부터는 릴리스에 함께 올라간 `.sig` 서명까지 맞아야 앱 안에서 설치돼요.
+
+**공식 배포처**: 설치 파일은 이 저장소의 릴리스 페이지에서만 받아 주세요. 다른 곳에서 받은 파일은 바뀌었을 수 있어요. 이름과 로고 정책은 [TRADEMARK.md](TRADEMARK.md)에 있어요.
 
 ## 요구 사항
 
@@ -255,7 +257,7 @@ HYSYS가 꺼져 있으면 앱에서 바로 켤 수 있어요. 켜지면 자동�
 <details>
 <summary>기여하거나 보안 문제를 알리고 싶어요.</summary>
 
-버그 알리기, 기능 제안, 튜토리얼 고치기는 [CONTRIBUTING.md](CONTRIBUTING.md)를 보세요. 보안 문제는 공개 이슈 대신 [SECURITY.md](SECURITY.md)의 비공개 신고 양식으로 알려 주세요. 모두 [행동 강령](CODE_OF_CONDUCT.md)을 지켜 주세요. 라이선스는 [Apache License 2.0](LICENSE)이에요.
+버그 알리기, 기능 제안, 튜토리얼 고치기는 [CONTRIBUTING.md](CONTRIBUTING.md)를 보세요. 보안 문제는 공개 이슈 대신 [SECURITY.md](SECURITY.md)의 비공개 신고 양식으로 알려 주세요. 모두 [행동 강령](CODE_OF_CONDUCT.md)을 지켜 주세요. 라이선스는 [Apache License 2.0](LICENSE)이고, 이름과 로고는 [TRADEMARK.md](TRADEMARK.md)를 따라요.
 </details>
 
 <p align="right"><a href="#ko">맨 위로</a> · <a href="#en">English</a></p>
@@ -447,7 +449,9 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
 
 3. Run the installer.
 
-**Update**: check for a new version in Settings > Updates. Downloading and installing start only when you press the button, and installing requires the downloaded file's checksum to match.
+**Update**: check for a new version in Settings > Updates. Downloading and installing start only when you press the button, and installing requires the downloaded file's checksum to match. From v0.10.39 the in-app install also requires the `.sig` signature published with the release.
+
+**Official source**: download installers only from this repository's release page. A file from anywhere else may have been altered. The name and logo policy is in [TRADEMARK.md](TRADEMARK.md).
 
 ## Requirements
 
@@ -493,7 +497,7 @@ Each version's changes are listed on the [release page](https://github.com/wjgoa
 <details>
 <summary>How can I contribute or report a security problem?</summary>
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for bug reports, feature ideas and tutorial fixes. Report security problems through the private form in [SECURITY.md](SECURITY.md), not a public issue. Please follow the [Code of Conduct](CODE_OF_CONDUCT.md). The license is the [Apache License 2.0](LICENSE).
+See [CONTRIBUTING.md](CONTRIBUTING.md) for bug reports, feature ideas and tutorial fixes. Report security problems through the private form in [SECURITY.md](SECURITY.md), not a public issue. Please follow the [Code of Conduct](CODE_OF_CONDUCT.md). The license is the [Apache License 2.0](LICENSE); the name and logo follow [TRADEMARK.md](TRADEMARK.md).
 </details>
 
 <br>

@@ -211,7 +211,7 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 
 **업데이트**: 설정 > 업데이트에서 새 버전을 확인해요. 받기와 설치는 직접 누를 때만 시작하고, 받은 파일의 체크섬이 맞아야 설치할 수 있어요. v0.10.39부터는 릴리스에 함께 올라간 `.sig` 서명까지 맞아야 앱 안에서 설치돼요.
 
-**공식 배포처**: 설치 파일은 이 저장소의 릴리스 페이지에서만 받아 주세요. 다른 곳에서 받은 파일은 바뀌었을 수 있어요. 이름과 로고 정책은 [TRADEMARK.md](TRADEMARK.md)에 있어요.
+이름과 로고 정책은 [TRADEMARK.md](TRADEMARK.md)에 있어요.
 
 ## 요구 사항
 
@@ -451,7 +451,7 @@ Describe the process, or upload a PFD picture (PNG, JPEG or PDF), and the app sh
 
 **Update**: check for a new version in Settings > Updates. Downloading and installing start only when you press the button, and installing requires the downloaded file's checksum to match. From v0.10.39 the in-app install also requires the `.sig` signature published with the release.
 
-**Official source**: download installers only from this repository's release page. A file from anywhere else may have been altered. The name and logo policy is in [TRADEMARK.md](TRADEMARK.md).
+The name and logo policy is in [TRADEMARK.md](TRADEMARK.md).
 
 ## Requirements
 

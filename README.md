@@ -42,7 +42,7 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 
 ## 소개와 튜토리얼
 
-설치하기 전에 브라우저에서 한곳에서 볼 수 있어요. "소개" 탭은 앱으로 무엇을 할 수 있는지 15장으로 보여줘요. 한국어와 영어로 볼 수 있어요. "튜토리얼" 탭은 연습 화면 위에서 안내 말풍선이 다음에 누를 곳을 짚어 줘요. 14단계를 직접 누르거나 "그냥 보기"로 지켜볼 수 있어요.
+설치하기 전에 브라우저에서 한 페이지로 볼 수 있어요. 앞부분 "소개"는 앱으로 무엇을 할 수 있는지 15장으로 보여 줘요(한국어·영어). 이어지는 "따라 하기"는 연습 화면 위에서 안내 말풍선이 다음에 누를 곳을 짚어 줘요. 14단계를 직접 누르거나 "그냥 보기"로 지켜볼 수 있어요. 왼쪽 목차에서 원하는 곳으로 바로 갈 수 있어요.
 
 <p align="center">
   <a href="https://wjgoarxiv.github.io/hysys-companion-releases/#tutorial">
@@ -57,13 +57,13 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 </p>
 
 <p align="center">
-  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/#intro"><img src="https://img.shields.io/badge/%EC%86%8C%EA%B0%9C-7dcfff?style=for-the-badge&labelColor=16161e" alt="소개 탭 열기"></a>
+  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/#intro"><img src="https://img.shields.io/badge/%EC%86%8C%EA%B0%9C-7dcfff?style=for-the-badge&labelColor=16161e" alt="소개부터 보기"></a>
   <a href="https://wjgoarxiv.github.io/hysys-companion-releases/#tutorial"><img src="https://img.shields.io/badge/%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC%20%EC%97%B4%EA%B8%B0-7aa2f7?style=for-the-badge&labelColor=16161e" alt="튜토리얼 열기"></a>
   <a href="https://wjgoarxiv.github.io/hysys-companion-releases/ui-shell/"><img src="https://img.shields.io/badge/%ED%99%94%EB%A9%B4%20%EB%8D%B0%EB%AA%A8-9ece6a?style=for-the-badge&labelColor=16161e" alt="화면 데모"></a>
 </p>
 
-- **소개와 튜토리얼**: [https://wjgoarxiv.github.io/hysys-companion-releases/](https://wjgoarxiv.github.io/hysys-companion-releases/). 처음이면 [소개](https://wjgoarxiv.github.io/hysys-companion-releases/#intro) 탭에서 15장으로 한눈에 보세요. 이어서 [튜토리얼](https://wjgoarxiv.github.io/hysys-companion-releases/#tutorial) 탭에서 직접 따라 해 보세요. 튜토리얼은 한국어만 있어요.
-- **HTML 파일로 내려받기**: 페이지 위쪽의 HTML 버튼을 누르면 보고 있는 소개나 튜토리얼을 파일 하나로 받아요. 인터넷 없이 더블클릭으로 열려요. 바로 받기: [소개](https://wjgoarxiv.github.io/hysys-companion-releases/download/HYSYS-Companion-intro.html) · [튜토리얼](https://wjgoarxiv.github.io/hysys-companion-releases/download/HYSYS-Companion-tutorial.html). 받은 파일의 튜토리얼 진행 상황은 웹페이지와 따로 저장돼요.
+- **소개와 튜토리얼**: [https://wjgoarxiv.github.io/hysys-companion-releases/](https://wjgoarxiv.github.io/hysys-companion-releases/). 처음이면 [소개](https://wjgoarxiv.github.io/hysys-companion-releases/#intro)부터 읽고, 이어서 [따라 하기](https://wjgoarxiv.github.io/hysys-companion-releases/#tutorial)로 넘어가세요. 따라 하기는 한국어로만 있어요.
+- **HTML 파일로 내려받기**: 페이지 위쪽의 '내려받기' 버튼을 누르면 소개와 따라 하기가 모두 든 파일 하나를 받아요. 인터넷 없이 더블클릭으로 열려요. [바로 받기](https://wjgoarxiv.github.io/hysys-companion-releases/download/HYSYS-Companion-guide.html). 받은 파일의 따라 하기 진행 상황은 웹페이지와 따로 저장돼요.
 - **화면 데모**: 앱의 실제 화면 코드를 예시 데이터로 돌려요. 빈 화면에서 말로 새 케이스를 시작해 질문, 초안, 승인 카드까지 눌러 볼 수 있어요. HYSYS나 AI에는 연결하지 않아서 케이스를 만들거나 열지는 못해요. 코드는 [`ui-shell/`](ui-shell/)에 있어요.
 
 ## 기능
@@ -282,7 +282,7 @@ The installer on the release page is `HYSYSCompanion_Native_Setup_<version>.exe`
 
 ## Intro and tutorial
 
-See it in the browser before installing, all in one place. The Intro tab shows what the app can do in 15 slides, in Korean and English. The Tutorial tab (Korean) puts a guide bubble on a practice screen to point at the next thing to press; walk the 14 steps yourself or press "그냥 보기" (just watch).
+See it in the browser before installing, on one page. The first part, Intro, shows what the app can do in 15 slides, in Korean and English. The second part, the tutorial (Korean), puts a guide bubble on a practice screen to point at the next thing to press; walk the 14 steps yourself or press "그냥 보기" (just watch). The contents list on the left jumps anywhere.
 
 <p align="center">
   <a href="https://wjgoarxiv.github.io/hysys-companion-releases/#tutorial">
@@ -297,13 +297,13 @@ See it in the browser before installing, all in one place. The Intro tab shows w
 </p>
 
 <p align="center">
-  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/#intro"><img src="https://img.shields.io/badge/Intro-7dcfff?style=for-the-badge&labelColor=16161e" alt="Open the Intro tab"></a>
-  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/#tutorial"><img src="https://img.shields.io/badge/Open%20the%20tutorial-7aa2f7?style=for-the-badge&labelColor=16161e" alt="Open the Tutorial tab"></a>
+  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/#intro"><img src="https://img.shields.io/badge/Intro-7dcfff?style=for-the-badge&labelColor=16161e" alt="Start with the intro"></a>
+  <a href="https://wjgoarxiv.github.io/hysys-companion-releases/#tutorial"><img src="https://img.shields.io/badge/Open%20the%20tutorial-7aa2f7?style=for-the-badge&labelColor=16161e" alt="Open the tutorial"></a>
   <a href="https://wjgoarxiv.github.io/hysys-companion-releases/ui-shell/"><img src="https://img.shields.io/badge/Screen%20demo-9ece6a?style=for-the-badge&labelColor=16161e" alt="Screen demo"></a>
 </p>
 
-- **Intro and tutorial**: [https://wjgoarxiv.github.io/hysys-companion-releases/](https://wjgoarxiv.github.io/hysys-companion-releases/). New here? Start with the [Intro](https://wjgoarxiv.github.io/hysys-companion-releases/#intro) tab for 15 slides, in Korean and English. Then follow along in the [Tutorial](https://wjgoarxiv.github.io/hysys-companion-releases/#tutorial) tab (Korean only).
-- **Download as HTML**: the HTML button at the top saves the intro or the tutorial you are viewing as one file that opens offline with a double-click. Direct links: [intro](https://wjgoarxiv.github.io/hysys-companion-releases/download/HYSYS-Companion-intro.html) · [tutorial](https://wjgoarxiv.github.io/hysys-companion-releases/download/HYSYS-Companion-tutorial.html). Tutorial progress in the file is kept apart from the web page.
+- **Intro and tutorial**: [https://wjgoarxiv.github.io/hysys-companion-releases/](https://wjgoarxiv.github.io/hysys-companion-releases/). New here? Read the [Intro](https://wjgoarxiv.github.io/hysys-companion-releases/#intro) first, then go on to the [tutorial](https://wjgoarxiv.github.io/hysys-companion-releases/#tutorial) (Korean only).
+- **Download as HTML**: the Download button at the top saves one file with both the intro and the tutorial. It opens offline with a double-click. [Direct link](https://wjgoarxiv.github.io/hysys-companion-releases/download/HYSYS-Companion-guide.html). Tutorial progress in the file is kept apart from the web page.
 - **Screen demo**: the app's real screen code running on sample data. Start a new case from words on an empty screen and click through the questions, the draft and the approval card. It connects to no HYSYS and no AI, so it cannot build or open a case. The code is in [`ui-shell/`](ui-shell/).
 
 ## Features

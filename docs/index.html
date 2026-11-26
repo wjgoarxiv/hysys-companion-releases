@@ -67,8 +67,8 @@ html[data-lang="ko"] [lang="en"], html[data-lang="en"] [lang="ko"] { display: no
 .bar {
   flex: none;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto auto auto;
-  grid-template-areas: "brand tabs cta open lang";
+  grid-template-columns: auto minmax(0, 1fr) auto auto auto auto;
+  grid-template-areas: "brand tabs cta dl open lang";
   align-items: center; column-gap: 12px;
   min-height: 60px; padding: 0 max(16px, env(safe-area-inset-right)) 0 max(16px, env(safe-area-inset-left));
   background: var(--c-surface);
@@ -114,6 +114,8 @@ html[data-lang="ko"] [lang="en"], html[data-lang="en"] [lang="ko"] { display: no
 .ctl .on { color: var(--c-accent-ink); }
 .ctl .off { color: var(--c-ink-3); font-weight: 400; }
 #open { grid-area: open; }
+#dl { grid-area: dl; width: auto; gap: 6px; padding: 0 12px; font: 700 14px/1 var(--font-mono); text-decoration: none; }
+#dl[hidden] { display: none; }
 #btnLang { grid-area: lang; }
 
 .note {
@@ -135,8 +137,8 @@ noscript .nojs { margin: 0; padding: 12px 16px; background: var(--c-warning-wash
 /* ---------- Phone ---------- */
 @media (max-width: 720px) {
   .bar {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    grid-template-areas: "brand tabs lang" "cta cta cta";
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    grid-template-areas: "brand tabs dl lang" "cta cta cta cta";
     column-gap: 8px; padding-left: max(10px, env(safe-area-inset-left)); padding-right: max(10px, env(safe-area-inset-right));
     min-height: 0;
   }
@@ -145,6 +147,8 @@ noscript .nojs { margin: 0; padding: 12px 16px; background: var(--c-warning-wash
   .tabs { margin-left: 0; gap: 0; }
   .tab { min-height: 52px; padding: 0 9px; font-size: 15px; flex: 1 1 auto; }
   #open { display: none; }
+  #dl { padding: 0; width: 44px; justify-content: center; }
+  #dl .dlt { display: none; }
   .cta { justify-content: center; margin: 0 0 8px; }
   .cta[hidden] { display: none; }
 }
@@ -172,6 +176,9 @@ noscript .nojs { margin: 0; padding: 12px 16px; background: var(--c-warning-wash
   <a class="cta" id="cta" href="#tutorial">
     <span lang="ko">튜토리얼 시작하기</span><span lang="en">Start the tutorial (Korean)</span>
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 H19 M13 6 L19 12 L13 18"/></svg>
+  </a>
+  <a class="ctl" id="dl" href="download/HYSYS-Companion-intro.html" download="HYSYS-Companion-intro.html" data-label-ko="이 페이지를 HTML 파일로 내려받기 (인터넷 없이 열려요)" data-label-en="Download this page as an HTML file (opens offline)" aria-label="이 페이지를 HTML 파일로 내려받기 (인터넷 없이 열려요)" title="HTML 내려받기">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 V15 M7 10 L12 15 L17 10 M5 20 H19"/></svg><span class="dlt">HTML</span>
   </a>
   <a class="ctl" id="open" href="intro/" target="_blank" rel="noopener" data-label-ko="이 페이지를 새 탭에서 열기" data-label-en="Open this page in a new tab" aria-label="이 페이지를 새 탭에서 열기">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4 H20 V10 M20 4 L11 13 M18 14 V20 H4 V6 H10"/></svg>
@@ -218,6 +225,8 @@ noscript .nojs { margin: 0; padding: 12px 16px; background: var(--c-warning-wash
   var cta = document.getElementById("cta");
   var note = document.getElementById("note");
   var openLink = document.getElementById("open");
+  var dl = document.getElementById("dl");
+  var FILE = { intro: "HYSYS-Companion-intro.html", tutorial: "HYSYS-Companion-tutorial.html" };
   var current = null;
 
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
@@ -263,6 +272,10 @@ noscript .nojs { margin: 0; padding: 12px 16px; background: var(--c-warning-wash
     cta.hidden = current !== "intro";
     note.hidden = !(L === "en" && current === "tutorial");
     openLink.setAttribute("href", PATH[current || "intro"]);
+    var file = FILE[current || "intro"];
+    dl.hidden = !file;  // the screen demo is many files
+    if (file) { dl.setAttribute("href", "download/" + file); dl.setAttribute("download", file); }
+    dl.setAttribute("title", lang() === "en" ? "Download HTML" : "HTML 내려받기");
   }
 
   function loadFrame(id) {

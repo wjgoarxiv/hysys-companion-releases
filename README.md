@@ -63,6 +63,7 @@ HYSYS Companion은 Aspen HYSYS 옆에서 쓰는 Windows 데스크톱 앱이에�
 </p>
 
 - **소개와 튜토리얼**: [https://wjgoarxiv.github.io/hysys-companion-releases/](https://wjgoarxiv.github.io/hysys-companion-releases/). 처음이면 [소개](https://wjgoarxiv.github.io/hysys-companion-releases/#intro) 탭에서 15장으로 한눈에 보세요. 이어서 [튜토리얼](https://wjgoarxiv.github.io/hysys-companion-releases/#tutorial) 탭에서 직접 따라 해 보세요. 튜토리얼은 한국어만 있어요.
+- **HTML 파일로 내려받기**: 페이지 위쪽의 HTML 버튼을 누르면 보고 있는 소개나 튜토리얼을 파일 하나로 받아요. 인터넷 없이 더블클릭으로 열려요. 바로 받기: [소개](https://wjgoarxiv.github.io/hysys-companion-releases/download/HYSYS-Companion-intro.html) · [튜토리얼](https://wjgoarxiv.github.io/hysys-companion-releases/download/HYSYS-Companion-tutorial.html). 받은 파일의 튜토리얼 진행 상황은 웹페이지와 따로 저장돼요.
 - **화면 데모**: 앱의 실제 화면 코드를 예시 데이터로 돌려요. 빈 화면에서 말로 새 케이스를 시작해 질문, 초안, 승인 카드까지 눌러 볼 수 있어요. HYSYS나 AI에는 연결하지 않아서 케이스를 만들거나 열지는 못해요. 코드는 [`ui-shell/`](ui-shell/)에 있어요.
 
 ## 기능
@@ -302,6 +303,7 @@ See it in the browser before installing, all in one place. The Intro tab shows w
 </p>
 
 - **Intro and tutorial**: [https://wjgoarxiv.github.io/hysys-companion-releases/](https://wjgoarxiv.github.io/hysys-companion-releases/). New here? Start with the [Intro](https://wjgoarxiv.github.io/hysys-companion-releases/#intro) tab for 15 slides, in Korean and English. Then follow along in the [Tutorial](https://wjgoarxiv.github.io/hysys-companion-releases/#tutorial) tab (Korean only).
+- **Download as HTML**: the HTML button at the top saves the intro or the tutorial you are viewing as one file that opens offline with a double-click. Direct links: [intro](https://wjgoarxiv.github.io/hysys-companion-releases/download/HYSYS-Companion-intro.html) · [tutorial](https://wjgoarxiv.github.io/hysys-companion-releases/download/HYSYS-Companion-tutorial.html). Tutorial progress in the file is kept apart from the web page.
 - **Screen demo**: the app's real screen code running on sample data. Start a new case from words on an empty screen and click through the questions, the draft and the approval card. It connects to no HYSYS and no AI, so it cannot build or open a case. The code is in [`ui-shell/`](ui-shell/).
 
 ## Features
